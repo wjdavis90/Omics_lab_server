@@ -99,7 +99,7 @@ Below I list the programs grouped by their path.
 
 # /scratch/Tools
 - anaconda3
-  - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server) on how to activate and initialize conda before use.
+  - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/using_conda.md) on how to activate and initialize conda before use.
 - angsd
 - beast
 - cutadapt-3.4
