@@ -144,6 +144,8 @@ Below I list the programs grouped by their path.
 - summarize_ggi.sh
 - tabToFasta
 - vcf2phylip.py
+- remove_small_contigs.pl
+	- From [here](https://github.com/elyons/BioInfoUtility)
 
 # Misc.
 - /opt/microsoft/omsagent/ruby/bin/ruby
