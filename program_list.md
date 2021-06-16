@@ -160,7 +160,7 @@ Below I list the programs grouped by their path.
 - summarize_ggi.sh
 - tabToFasta
 - vcf2phylip.py
-	-From [here](https://github.com/edgardomortiz/vcf2phylip)
+	- From [here](https://github.com/edgardomortiz/vcf2phylip)
 - remove_small_contigs.pl
 	- From [here](https://github.com/elyons/BioInfoUtility)
 
