@@ -102,21 +102,37 @@ Below I list the programs grouped by their path.
   - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/using_conda.md) on how to activate and initialize conda before use.
 - angsd
 - beast
+- bedtools
+	-static binary
+- ContamFinder1.1.1
 - cutadapt-3.4
+- diamond
 - Dsuite
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before trying to run.
 	- Program packages are in `/Build/` and plotting is in `/utils/`.
   - The instructions can be found [here](https://github.com/millanek/Dsuite) and a there is a [tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
-- gsl-2.6
-- htslib
-- parallel-20210522
-- snapp_prep-master
-- QuIBL
-- GCC 4.9.4
-	- The executables are in `/scratch/Tools/local/bin`
 - EMBOSS
 	- The executables are in `/scratch/Tools/local/bin`
+- exonerate 2.2.0
+- FastTreeMP
+- genus_assigner
+- ghostx-1.3.7
+- gsl-2.6
+- htslib
+- GCC 4.9.4
+	- The executables are in `/scratch/Tools/local/bin`
+-msmc-tools
+- parallel-20210522
+- QuIBL
+- R 4.1.0
+- SCGid
+	-not fulling installed yet
+- SequenceTools
+- snapp_prep-master
+- Stacks 2.58
+	-Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before running
 - treemix-1.13
+	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib/:/scratch/Tools/local/lib64/` before running
 - TrimGalore-0.6.6
 
 # /scratch/Tools/scripts
@@ -144,6 +160,7 @@ Below I list the programs grouped by their path.
 - summarize_ggi.sh
 - tabToFasta
 - vcf2phylip.py
+	-From [here](https://github.com/edgardomortiz/vcf2phylip)
 - remove_small_contigs.pl
 	- From [here](https://github.com/elyons/BioInfoUtility)
 
