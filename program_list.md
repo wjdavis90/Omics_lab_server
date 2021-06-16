@@ -121,7 +121,7 @@ Below I list the programs grouped by their path.
 - htslib
 - GCC 4.9.4
 	- The executables are in `/scratch/Tools/local/bin`
--msmc-tools
+- msmc-tools
 - parallel-20210522
 - QuIBL
 - R 4.1.0
