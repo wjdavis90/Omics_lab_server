@@ -110,23 +110,28 @@ Below I list the programs grouped by their path.
 - Dsuite
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before trying to run.
 	- Program packages are in `/Build/` and plotting is in `/utils/`.
-  - The instructions can be found [here](https://github.com/millanek/Dsuite) and a there is a [tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
+  - The instructions can be found [here](https://github.com/millanek/Dsuite) and there is a [tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
 - EMBOSS
 	- The executables are in `/scratch/Tools/local/bin`
 - exonerate 2.2.0
 - FastTreeMP
 - genus_assigner
 - ghostx-1.3.7
+-  G-Phocs
 - gsl-2.6
 - htslib
 - GCC 4.9.4
 	- The executables are in `/scratch/Tools/local/bin`
 - msmc-tools
 - parallel-20210522
+- [py-popgen](https://ppp.readthedocs.io/en/latest/PPP_pages/intro.html) as a conda environment
 - QuIBL
 - R 4.1.0
+	- See [here]() for a list of available packages 
+- Qiime2
+	- not fully installed yet
 - SCGid
-	-not fulling installed yet
+	- not fully installed yet
 - SequenceTools
 - snapp_prep-master
 - Stacks 2.58
