@@ -135,7 +135,7 @@ Below I list the programs grouped by their path.
 - SequenceTools
 - snapp_prep-master
 - Stacks 2.58
-	-Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before running
+	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before running
 - treemix-1.13
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib/:/scratch/Tools/local/lib64/` before running
 - TrimGalore-0.6.6
