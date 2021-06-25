@@ -2,43 +2,8 @@
 
 **Purpose:** This document is a list all programs/tools on the server and the PATH to them. It is also annotated to include special directions for running a program if need be.
 
-**Tip:** If one is going to be using one of these programs regularly, it is recommended one edits one's `.bash_profile` file in one's home directory to export it to PATH every time one logs in. Example using Dsuite:
+**Tip:** If one is going to be using one of these programs regularly, it is recommended one edits one's `.bash_profile` file in one's home directory to export it to PATH every time one logs in. [Instructions on how to do so](https://github.com/wjdavis90/Omics_lab_server/blob/main/setting_PATH.md)
 
-This is what `.bash_profile` looks like before editing.
-
-```bash
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
-fi
-
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
-```
-
-Using vi or vim, one adds `PATH=$PATH:/scratch/Tools/Dsuite/Build/` and `PATH=$PATH:/scratch/Tools/Dsuite/utils/` to it so that it looks like this.
-
-```bash
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
-fi
-
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-PATH=$PATH:/scratch/Tools/Dsuite/Build/
-PATH=$PATH:/scratch/Tools/Dsuite/utils/
-
-export PATH
-```
-
-NOTE: One may need to set PATH to a subdirectory, such as `/bin/`, `/Build/`, `/utils/`, or `/src/`!
-
-Below I list the programs grouped by their path.
 
 ## /home/sangeet/UserDirectories/Sangeet/Tools/
 
