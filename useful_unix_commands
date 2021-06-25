@@ -7,14 +7,14 @@ cd    change directory; puts you where you want to be
 mkdir make directory; creates a new "folder"
       -p create necessary parent directories
 
-cat   concatenate; opens a file
+cat   concatenate; opens a file; can also be used to merge files
 
 grep  grabs lines containing the desired pattern
       -w forces exact match
       -v inverse selection
       -f file containing the search patterns
-      -A include # of lines coming after the pattern
-      -B include # of lines coming before the pattern
+      -A include number of lines coming after the pattern
+      -B include number of lines coming before the pattern
       -c counts the number of times a pattern occurs
    
 sed   in line editor; tutorial-->http://www.grymoire.com/Unix/Sed.html#uh-0
@@ -24,19 +24,23 @@ awk   magic tool; tutorial-->http://www.grymoire.com/Unix/Awk.html
 tr    translate; turn one character into another
 
 cut   keep only the desired field
+      -f specify which field to be kept
 
 sort  sort
       -n sort as number
       -r sort in reverse order
 
 uniq  show only the unique values in a list
-      -c count the number of occurances of each uniqu value
+      -c count the number of occurances of each unique value
 
 dos2unix    convert dos characters into unix characters
 
 du    disk usage; displays info related to file size etc.
 
 &     placed at the end of a command, it runs the command in the background so you can continue using the command line
+
+&&    placed at the end of a command and before the beginning of a second command; it tells the system to run the second command if and only if the 1st
+      finishes without an error message
 
 jobs  reveals what jobs are running in the background
 
@@ -67,6 +71,8 @@ rm    permanently deletes a file
 rmdir permanently deletes a directory
 
 chmod allows you to change who can read/write/execute a file
+      +777 makes it so that anyone can do anything
+      -R run recursively through a directory
 
 gzip  compress/decompress .gz files
 
@@ -83,6 +89,8 @@ head  show first n lines of a file
 tail  show the last n lines of a file
 
 wget  retrieve file from a url
+
+git   used to pull, push, or clone to/from GitHub
 
 find  find file(s)
 
@@ -101,3 +109,11 @@ find  find file(s)
 ./    current directory
 
 ../   up one directory
+
+screen      opens a new environment wherein one can set environmental variables and run jobs without interferring with other jobs running
+      -d detach
+      -r resume
+      -X quit terminates the screen
+      
+parallel    Allows for-loops and other loops to run in parallel
+
