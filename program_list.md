@@ -68,7 +68,7 @@
 - angsd
 - beast
 - bedtools
-	-static binary
+	- static binary, must add '/scratch/Tools/' to your path
 - ContamFinder1.1.1
 - cutadapt-3.4
 - diamond
@@ -80,6 +80,7 @@
 	- The executables are in `/scratch/Tools/local/bin`
 - exonerate 2.2.0
 - FastTreeMP
+	- static binary, must add '/scratch/Tools/' to your path
 - genus_assigner
 - ghostx-1.3.7
 -  G-Phocs
@@ -87,9 +88,13 @@
 - htslib
 - GCC 4.9.4
 	- The executables are in `/scratch/Tools/local/bin`
+- mira
+- MITObim
+	- must add mira to your path for MITObim to work 
 - msmc-tools
 - parallel-20210522
-- [py-popgen](https://ppp.readthedocs.io/en/latest/PPP_pages/intro.html) as a conda environment
+- [py-popgen](https://ppp.readthedocs.io/en/latest/PPP_pages/intro.html)
+	- as a conda environment
 - QuIBL
 - R 4.1.0
 	- See [here]() for a list of available packages 
