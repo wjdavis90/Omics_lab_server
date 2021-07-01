@@ -20,4 +20,5 @@
  - [GitHub repository](https://github.com/millanek/Dsuite)
  - [Milan Malinsky's tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
  
- 
+## Blast
+- [How to read BLAST output format 6](https://www.metagenomics.wiki/tools/blast/blastn-output-format-6)
