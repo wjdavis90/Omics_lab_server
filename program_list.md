@@ -2,7 +2,7 @@
 
 **Purpose:** This document is a list all programs/tools on the server and the PATH to them. It is also annotated to include special directions for running a program if need be.
 
-**Tip:** If one is going to be using one of these programs regularly, it is recommended one edits one's `.bash_profile` file in one's home directory to export it to PATH every time one logs in. [Instructions on how to do so](https://github.com/wjdavis90/Omics_lab_server/blob/main/setting_PATH.md)
+**Tip:** If one is going to be using one of these programs regularly, it is recommended one edits one's `.bash_profile` file in one's home directory to export it to PATH every time one logs in. [Instructions on how to do so](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
 
 
 ## /home/sangeet/UserDirectories/Sangeet/Tools/
@@ -64,7 +64,7 @@
 
 # /scratch/Tools
 - anaconda3
-  - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/using_conda.md) on how to activate and initialize conda before use.
+  - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) on how to activate and initialize conda before use.
 - angsd
 - beast
 - bedtools
@@ -97,7 +97,7 @@
 	- as a conda environment
 - QuIBL
 - R 4.1.0
-	- See [here]() for a list of available packages 
+	- See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/available_R_packages.md) for a list of available packages 
 - Qiime2
 	- not fully installed yet
 - SCGid
