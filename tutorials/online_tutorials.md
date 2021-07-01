@@ -13,7 +13,7 @@
   - [GitHub repository](https://github.com/thomasp85/patchwork)
   - [Online manual/tutorial](https://patchwork.data-imaginist.com/index.html)
   - Pat Schloss's Riffomonas Project's [Youtube video](https://youtu.be/2o1YDUKyhu0)
- - Rangemaps
+- Rangemaps
   - [Marlon E. Cobos's tutorial](https://github.com/marlonecobos/rangemap)
  
  ## Dsuite
