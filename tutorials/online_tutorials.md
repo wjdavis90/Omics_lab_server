@@ -22,3 +22,7 @@
  
 ## Blast
 - [How to read BLAST output format 6](https://www.metagenomics.wiki/tools/blast/blastn-output-format-6)
+
+## UNix
+- [sed](http://www.grymoire.com/Unix/Sed.html#uh-0)
+- [awk](http://www.grymoire.com/Unix/Awk.html)
