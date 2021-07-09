@@ -66,6 +66,8 @@
 - anaconda3
   - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) on how to activate and initialize conda before use.
 - angsd
+- axtChain
+	- executable is in `/scratch/Tools/local/bin`
 - beast
 - bedtools
 	- static binary, must add '/scratch/Tools/' to your path
@@ -81,6 +83,7 @@
 - exonerate 2.2.0
 - FastTreeMP
 	- static binary, must add '/scratch/Tools/' to your path
+- gatk-4.2.0.0
 - genus_assigner
 - ghostx-1.3.7
 -  G-Phocs
@@ -88,6 +91,7 @@
 - htslib
 - GCC 4.9.4
 	- The executables are in `/scratch/Tools/local/bin`
+- lastz
 - mira
 - MITObim
 	- must add mira to your path for MITObim to work 
