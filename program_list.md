@@ -4,6 +4,8 @@
 
 **Tip:** If one is going to be using one of these programs regularly, it is recommended one edits one's `.bash_profile` file in one's home directory to export it to PATH every time one logs in. [Instructions on how to do so](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
 
+**Tip:** If one installs a tool into `/scratch/Tools/`, it is helpful to run `chmod -R +777` on the directory or `chmod +777` on the executable. This ensures that other users have the ability to make changes such as adding packages (e.g., in R or conda), updating the version, or adding/updating databases. 
+
 
 ## /home/sangeet/UserDirectories/Sangeet/Tools/
 
