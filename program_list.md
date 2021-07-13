@@ -130,6 +130,7 @@
 - get_parsimony_score.sh
 - gff3ToFasta
 - mask_imputed_gts.rb
+- [parallelLastz.pl](https://github.com/jnarayan81/parallelLastz)
 - plot_d.rb
 - plot_f4ratio.rb
 - plot_fixed_site_gts.rb
