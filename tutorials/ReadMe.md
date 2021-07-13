@@ -1,1 +1,1 @@
-This is a repository for tutorials I wrote for the Lamichhaney 'Omics Lab. There is also a file linking to tutorials that I have used and found helpful.
+This is a repository for tutorials I wrote for the Lamichhaney 'Omics Lab. There is also a [list](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/online_tutorials.md) of online tutorials that I have used and found helpful.
