@@ -117,3 +117,6 @@ screen      opens a new environment wherein one can set environmental variables 
       
 parallel    Allows for-loops and other loops to run in parallel
 
+locate      find things!
+
+which tells what version of a program is running
