@@ -104,6 +104,7 @@
 - QuIBL
 - R 4.1.0
 	- See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/available_R_packages.md) for a list of available packages 
+	- Some of the packages require the following to be done before they can be loaded `export LD_LIBRARY_PATH=/scratch/Tools/anaconda3/lib/`.
 - Qiime2
 	- not fully installed yet
 - SCGid
