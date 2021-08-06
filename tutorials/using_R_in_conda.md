@@ -2,7 +2,7 @@
 
 This information comes from the [Anaconda documentation](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/).
 
-First, activate the conda environment: `conda activate `.
+First, activate the conda environment: `conda activate r_env`.
 
 From here, you can run R interactively by executing `R` or run a pre written script with `Rscript --vanilla script`.
 
