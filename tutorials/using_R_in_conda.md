@@ -1,6 +1,6 @@
 # Using R within the conda environment
 
-This information comes from the [Andaconda documentation](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/).
+This information comes from the [Anaconda documentation](https://docs.anaconda.com/anaconda/user-guide/tasks/using-r-language/).
 
 First, activate the conda environment: `conda activate `.
 
