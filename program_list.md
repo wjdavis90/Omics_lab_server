@@ -101,6 +101,7 @@
 - parallel-20210522
 - [py-popgen](https://ppp.readthedocs.io/en/latest/PPP_pages/intro.html)
 	- as a conda environment
+	- to use `conda activate py-popgen`
 - QuIBL
 - R 4.1.0
 	- This is available as a conda enironment. See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_R_in_conda.md) for instructions on how to activate the environment and use R within that environment.
