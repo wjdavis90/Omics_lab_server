@@ -119,6 +119,8 @@
 - treemix-1.13
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib/:/scratch/Tools/local/lib64/` before running
 - TrimGalore-0.6.6
+- [VAMB](https://github.com/RasmussenLab/vamb)
+	- to use `conda activate VAMB`
 
 # /scratch/Tools/scripts
 - analyze_tree_asymmetry.rb
