@@ -67,6 +67,8 @@
 # /scratch/Tools
 - anaconda3
   - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) on how to activate and initialize conda before use.
+- [agat](https://github.com/NBISweden/AGAT)
+  - use `conda activate agat`
 - angsd
 - axtChain
 	- executable is in `/scratch/Tools/local/bin`
