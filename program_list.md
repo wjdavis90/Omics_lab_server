@@ -75,7 +75,7 @@
 - beast
 - bedtools
 	- static binary, must add '/scratch/Tools/' to your path
-- Blast Taxonomy Updater
+- Blast Taxonomy Annotator
 	- to use `conda activate blast_taxonomy_annotator`
 - ContamFinder1.1.1
 - cutadapt-3.4
