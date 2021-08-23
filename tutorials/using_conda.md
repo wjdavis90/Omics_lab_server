@@ -10,4 +10,11 @@ source /scratch/Tools/anaconda3/bin/activate
 conda init
 ```
 
-Now, one will have to log out and log back in for the changes to take affect.
+Now, one will have to log out and log back in for the changes to take affect. One will see `(base)` next to the command prompt. This means that you are operating within the base conda environment. If you do not wish to do so, and there are many valid reasons not to do so, simply run `conda deactivate`.
+
+For packages that can be installed with conda, the typical command is `conda install package`. However, it is best to create an environment for a package before installing it. That way the installation does not mess up other packages that may use the same dependencies. For example:
+
+```bash
+conda create -n bcftools
+conda install -n bdcftools -c bioconda bcftools
+```
