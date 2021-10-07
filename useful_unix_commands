@@ -19,7 +19,11 @@
 
 >>	append output to existing file
 
+#	marks line as a comment (in general)
+
 awk	magic tool; tutorial-->http://www.grymoire.com/Unix/Awk.html
+
+bash	run a bash script
 
 cat	concatenate; opens a file; can also be used to merge files
 
@@ -100,6 +104,8 @@ screen	opens a new environment wherein one can set environmental variables and r
 	-X quit terminates the screen
 
 sed	in line editor; tutorial-->http://www.grymoire.com/Unix/Sed.html#uh-0
+
+sh	runs a shell script
 
 sort	sort
 	-n sort as number
