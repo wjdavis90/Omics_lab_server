@@ -10,3 +10,5 @@ However, I feel that will be a bit too much to load onto all of you at once. If 
 
 1. Document and explain everything. You should be able to return to your script 2 years from now and know what you did and why you did it.
 2. To make a comment in a script, be it bash/shell or R, simply start the line with #. `#This is an example of a comment within a script. bash/shell/R will see the # and ignore everything after it.`
+
+Later, I will collect all of your scripts, compile them, add Markdown language, and upload them to the appropriate GitHub folder to be the tutorial for that day.
