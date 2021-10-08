@@ -36,18 +36,29 @@ d.	There are other options if you don’t like either of those
 
 ***Schedule***
 October 14, 2021--[Day 1: Unix in a nutshell](https://github.com/wjdavis90/Omics_lab_server/tree/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell)
+
 9-9:45 am: Introductory lecture into Unix and basic Unix programs
+
 9:45-10 am: Break!
+
 10-10:30 am: Instructions on the activity
+
 10:30 am-12 pm: We will do bioinformatics together!
+
 12-1 pm: Lunch!
+
 1-3 pm: We will continue to do bioinformatics together!
 
 October 15, 2021--[Day 2: Getting to know R](https://github.com/wjdavis90/Omics_lab_server/tree/main/tutorials/2021_Bio_Info_Bootcamp/Getting_to_know_R)
-9-9:45 am: Introductory lecture into R and basic R commands
-9:45-10:15 am: Introduction to tidyverse
-10:15-10:30am: Break!
-10:30 am-12 pm: We will do bioinformatics together!
-12-1 pm: Lunch!
-1-3 pm: We will continue to do bioinformatics together!
 
+9-9:45 am: Introductory lecture into R and basic R commands
+
+9:45-10:15 am: Introduction to tidyverse
+
+10:15-10:30am: Break!
+
+10:30 am-12 pm: We will do bioinformatics together!
+
+12-1 pm: Lunch!
+
+1-3 pm: We will continue to do bioinformatics together!
