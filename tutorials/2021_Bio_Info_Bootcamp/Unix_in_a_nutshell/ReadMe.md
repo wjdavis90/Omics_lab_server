@@ -10,7 +10,7 @@
 
 5.[How to set environmental variables and edit the bash profile within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
 
-[Unix](https://en.wikipedia.org/wiki/Unix) (and unix-like systems) is a poweful, flexible operating system. Its [philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) is that programs (aka, commands) should be built to do a single job and do it well; work well together; work with text format; and, be "easy" to use. 
+[Unix](https://en.wikipedia.org/wiki/Unix) (and unix-like systems) is a poweful, flexible operating system. Its [philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) is that programs (aka, commands) should be built to do a single job and do it well; work well together; work with text format; and, be simple to use. 
 
 I keep a running list of [useful Unix commands](https://github.com/wjdavis90/Omics_lab_server/blob/main/useful_unix_commands). I add try to add new commands to the list as I learn them. If you know any thing I do not, feel free to add them! As well, some of the items on the list are notations rather than commands, such as `#`, which is used to indicate that a line is a comment rather than a command to be executed. As you can see, there are not that many. I tend to use the same commands over and over again to accomplish what I need. Here are the commands that I most freqently use, and that we will use during bootcamp.
 
