@@ -54,11 +54,11 @@ We are going to move on to some more complicated means of manipulating files. Th
 ```bash
 head -n 1 example_data.txt
 ```
-This should show you the column names of `Baby_name eye_color Sex Birth_mass_kg`.Let's say we want to know how many of each kind of observation is in each column. For example, how many of each "Sex" do we have? We can do this by using the `|` to pipe together several unix commands. In the example below, I have a [useless use of cat](https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat). Hey! I am not perfect and none of you should strive to write perfect code! It is a useless use of cat, but it is convient and the code works. To do what we need to do, we must let things like that go.
+This should show you the column names of `Baby_name Sex Birth_mass_kg`.Let's say we want to know how many of each kind of observation is in each column. For example, how many of each "Sex" do we have? We can do this by using the `|` to pipe together several unix commands. In the example below, I have a [useless use of cat](https://en.wikipedia.org/wiki/Cat_(Unix)#Useless_use_of_cat). Hey! I am not perfect and none of you should strive to write perfect code! It is a useless use of cat, but it is convient and the code works. To do what we need to do, we must let things like that go.
 
 Anyway, back to the task at hand. How do we determine how many of each "Sex" there are? We are going to do this by reducing the dataset to just the "Sex" column with `cut` and then we are going to use `sort` and `uniq` to count how many are of each state.
 ```bash
-cat example_data.txt | cut -f 3 | sort | uniq -c
+cat example_data.txt | cut -f 2 | sort | uniq -c
 ```
 Here `cut` cuts the dataset to only the column we want. We specify the column by its number using the `-f` flag. Another flag to be aware of with `cut` is `-d`, which tells `cut` what character separates the columns. By default it is tab. With `|` we route the stout into the next command `sort`, which arranges everything in alphabetical order. We pipe that stout into `uniq` that reduces the data to just unique values, and the `-c` flag tells `uniq` that we want a count of how many times each value appears. This is what we should get.
 ```bash
@@ -70,6 +70,57 @@ male  1
 Well, that is interesting. There are two different coding systems being used! That is not ideal. We want the same coding system to be used for all the observations. We can make that happen using unix commands! 
 
 
+ok so at this point, I need to actually do this so I know what the output will be but I dont have access to the server and I am too lazy to go upstairs to make that happen. So, I'm going to outline what I want to do next.
 
+The simplest way to do this would be to use `tr`, which means "translate". It turns a character or set of characters into a different set. It is entirely approriate to use here, like so.
+```bash
+cat example_data.txt | tr "male" "M" | tr "female" "F" > tidy_data.txt
+```
+However, a downside with using `tr` is that we have to create a new file. Maybe we don't want to. Another downside is that `tr`, while useful, is limited in what it can do. A much more powerful tool is `sed`. [sed](https://www.gnu.org/software/sed/manual/sed.html) stands for stream editor, and it allows us to edit the file directly. There is a wonderful [sed tutorial](https://www.grymoire.com/Unix/Sed.html) that I frequently consult and highly reccomend.
+```bash
+sed -i 's/male/M/g' example_data.txt
 
+sed -i 's/female/F/g' example_data.txt
+```
+Here the `-i` flag tells `sed` we want to edit within the file directly and not create a new file. The `'s/male/M/g'` tells `sed` that we want to substitute ('s/) "male" for "M" globally (/g'), or throughout the whole file. Let's make sure it worked with `cat example_data.txt`. We should see
+```bash
+[output]
+```
+What is we wanted everything to be "male" and "female" instead of "M" and "F"? We could try
+```bash
+sed -i 's/M/male/g' example_data.txt
 
+sed -i 's/F/female/g' example_data.txt
+```
+Let's check with `cat example_data.txt`.
+```bash
+[output]
+```
+Uh oh! It replaced the "M"'s in the names with "male"! We did not want that! Here too is where `sed` is more powerful than `tr`. With `sed` we can fine tune the pattern that we want replaced. Since all the "M"'s that we do want replaced are preceded (and followed by) a tab, we can use that. Here, we are briefly going to brush against [regular expressions](https://www.grymoire.com/Unix/Regular.html). In unix, we can represent a tab with `\t`, which is a regular expression.
+```bash
+sed -i 's/\tM/male/g' example_data.txt
+
+sed -i 's/\tF/female/g' example_data.txt
+```
+Let's check to see if this fixes the problem. `cat example_data.txt`.
+```bash
+[output]
+```
+
+Let's ask another question: How many babies of each mass were born?
+```bash
+cat example_data.txt | cut -f 3 | sort | uniq -c
+```
+We should get
+```bash
+[output]
+```
+4.5kg!? Wow, that is a big baby! With this dataset, figuring out which baby has a mass of 4.5kg is easy. We would simply `cat` the file and figure it out. But if we had hundreds of enteries in the file, that approach would not be feasible. Instead, we could pull that line out of file with `grep`. [Grep](https://en.wikipedia.org/wiki/Grep) is an acronym for "Globally search for Regular Expression and Print matching lines"; however, I think of it as a [corruption](http://www.artandpopularculture.com/Corruption_%28linguistics%29) of the word "grab". Thus, `grep` grabs and prints what we ask for.
+```bash
+cat example_data.txt | grep "4.5"
+```
+We see that William is the big baby!
+
+`awk` is a much more powerful tool than `sed`, but I do not know to use it, per se. Of the times that I have [used awk](https://github.com/Michigan-Mycology/Lab-Code-and-Hacks/blob/master/Phylogenomics/processing_genbank_files/awk_multi_to_single_loop.sh), I simply copied and pasted what someone else wrote. [Here is a tutorial](https://www.grymoire.com/Unix/Awk.html).
+
+And that is it. Those are the main tools that I use to create and manipulate files.
