@@ -4,14 +4,14 @@
 
 At the end of these two days, we will know:
 1.	[the importance of taking good notes/properly annotating our scripts](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Learning_Objective_1.md)
-2.	how to navigate within an unix/unix-like system
-3.	how to create and manipulate files within an unix/unix-like system
-4.	how to download/install within an unix/unix-like system
-5.	how to set environmental variables and edit the bash profile within an unix/unix-like system
-6.	how to install packages and load libraries in R
-7.	how to import data into R
-8.	how to manipulate data in R
-9.	how to use ggplot2
+2.	[how to navigate within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/navigating_unix.md)
+3.	[how to create and manipulate files within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/create_manipulate_files.md)
+4.	[how to download/install within an unix/unix-like system]()
+5.	[how to set environmental variables and edit the bash profile within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
+6.	[how to install packages and load libraries in R]()
+7.	[how to import data into R]()
+8.	[how to manipulate data in R]()
+9.	[how to use ggplot2]()
 
 ## Pre-boot camp activities
 
