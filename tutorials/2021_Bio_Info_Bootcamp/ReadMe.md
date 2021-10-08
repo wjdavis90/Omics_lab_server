@@ -34,6 +34,7 @@ d.	There are other options if you don’t like either of those
 ```
 4.	Download the data from the Google Dive folder and place in the appropriate Data subfolder on your local machine
 ***DO NOT SHARE THE LINK OR THE DATA WITH ANYONE!*** It is data that we are currently working with on the Philornis project.
+5. Review the documentation found in this folder and the appropriate subfolders.
  
 
 ## Schedule
