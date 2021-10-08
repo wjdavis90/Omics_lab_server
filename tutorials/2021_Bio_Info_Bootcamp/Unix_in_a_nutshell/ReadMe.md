@@ -2,13 +2,13 @@
 
 **Learning Objectives**
 
-2.[How to navigate within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/navigating_unix.md)
+2. [How to navigate within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/navigating_unix.md)
 
-3.[How to create and manipulate files within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/create_manipulate_files.md)
+3. [How to create and manipulate files within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/create_manipulate_files.md)
 
-4.[How to download/install within an unix/unix-like system]()
+4. [How to download/install within an unix/unix-like system]()
 
-5.[How to set environmental variables and edit the bash profile within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
+5. [How to set environmental variables and edit the bash profile within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
 
 [Unix](https://en.wikipedia.org/wiki/Unix) (and unix-like systems) is a poweful, flexible operating system. Its [philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) is that programs (aka, commands) should be built to do a single job and do it well; work well together; work with text format; and, be simple to use. 
 
