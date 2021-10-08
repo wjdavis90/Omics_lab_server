@@ -18,10 +18,15 @@ At the end of these two days, we will know:
 Before boot camp begins, please:
 1.	Install [R/RStudio](https://www.r-project.org/) on your local machine. Instructions for RStudio can be found [here](https://youtu.be/D6CunpqF04E).
 2.	Install a suitable text editor on your local machine
-a.	NOT notepad, wordpad, or anything like Microsoft Windows
-b.	I use [Notepad++](https://notepad-plus-plus.org/) for Windows
-c.	I used TextWrangler for mac, but it has been replaced with [BBEdit](https://www.barebones.com/products/bbedit/)
-d.	There are other options if you don’t like either of those
+     
+     a.	NOT notepad, wordpad, or anything like Microsoft Windows
+     
+     b.	I use [Notepad++](https://notepad-plus-plus.org/) for Windows
+     
+     c.	I used TextWrangler for mac, but it has been replaced with [BBEdit](https://www.barebones.com/products/bbedit/)
+     
+     d.	There are other options if you don’t like either of those
+
 3.	Create the following series of folders and subfolders somewhere
 ```bash
 2021-BioInfo_Boot_Camp
