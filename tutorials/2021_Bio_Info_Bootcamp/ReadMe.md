@@ -1,6 +1,6 @@
 # Lamichhaney Lab Bioinformatic Boot Camp October 14-15 2021
 
-**Learning Objectives**
+## Learning Objectives
 
 At the end of these two days, we will know:
 1.	the importance of taking good notes/properly annotating our scripts
@@ -13,7 +13,7 @@ At the end of these two days, we will know:
 8.	how to manipulate data in R
 9.	how to use ggplot2
 
-**Pre-boot camp activities**
+## Pre-boot camp activities
 
 Before boot camp begins, please:
 1.	Install [R/RStudio](https://www.r-project.org/) on your local machine. Instructions for RStudio can be found [here](https://youtu.be/D6CunpqF04E).
@@ -36,7 +36,7 @@ d.	There are other options if you don’t like either of those
 ***DO NOT SHARE THE LINK OR THE DATA WITH ANYONE!*** It is data that we are currently working with on the Philornis project.
  
 
-***Schedule***
+## Schedule
 
 October 14, 2021--[Day 1: Unix in a nutshell](https://github.com/wjdavis90/Omics_lab_server/tree/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell)
 
