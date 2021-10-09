@@ -62,10 +62,11 @@ cat example_data.txt | cut -f 2 | sort | uniq -c
 ```
 Here `cut` cuts the dataset to only the column we want. We specify the column by its number using the `-f` flag. Another flag to be aware of with `cut` is `-d`, which tells `cut` what character separates the columns. By default it is tab. With `|` we route the stout into the next command `sort`, which arranges everything in alphabetical order. We pipe that stout into `uniq` that reduces the data to just unique values, and the `-c` flag tells `uniq` that we want a count of how many times each value appears. This is what we should get.
 ```bash
-F 6
-M 2
-female  1
-male  1
+ 6 F
+ 1 female
+ 2 M
+ 1 male
+ 1 Sex
 ```
 Well, that is interesting. There are two different coding systems being used! That is not ideal. We want the same coding system to be used for all the observations. We can make that happen using unix commands! 
 
@@ -78,15 +79,25 @@ cat example_data.txt | tr "male" "M" | tr "female" "F" > tidy_data.txt
 ```
 However, a downside with using `tr` is that we have to create a new file. Maybe we don't want to. Another downside is that `tr`, while useful, is limited in what it can do. A much more powerful tool is `sed`. [sed](https://www.gnu.org/software/sed/manual/sed.html) stands for stream editor, and it allows us to edit the file directly. There is a wonderful [sed tutorial](https://www.grymoire.com/Unix/Sed.html) that I frequently consult and highly reccomend.
 ```bash
-sed -i 's/male/M/g' example_data.txt
-
 sed -i 's/female/F/g' example_data.txt
+
+sed -i 's/male/M/g' example_data.txt
 ```
 Here the `-i` flag tells `sed` we want to edit within the file directly and not create a new file. The `'s/male/M/g'` tells `sed` that we want to substitute ('s/) "male" for "M" globally (/g'), or throughout the whole file. Let's make sure it worked with `cat example_data.txt`. We should see
 ```bash
-[output]
+Baby_name       Sex     Birth_mass_kg
+Catalina        F       3.5
+Hannah  F       3.5
+Izy     F       3.5
+Jonathan        M       3.5
+Megan   F       3.5
+Melia   F       3.5
+Prashant        M       3.5
+Teresa  F       3.5
+Trixie  F       3.5
+William M       4.5
 ```
-What is we wanted everything to be "male" and "female" instead of "M" and "F"? We could try
+What if we wanted everything to be "male" and "female" instead of "M" and "F"? We could try
 ```bash
 sed -i 's/M/male/g' example_data.txt
 
@@ -94,17 +105,37 @@ sed -i 's/F/female/g' example_data.txt
 ```
 Let's check with `cat example_data.txt`.
 ```bash
-[output]
+Baby_name       Sex     Birth_mass_kg
+Catalina        female  3.5
+Hannah  female  3.5
+Izy     female  3.5
+Jonathan        male    3.5
+maleegan        female  3.5
+maleelia        female  3.5
+Prashant        male    3.5
+Teresa  female  3.5
+Trixie  female  3.5
+William male    4.5
 ```
 Uh oh! It replaced the "M"'s in the names with "male"! We did not want that! Here too is where `sed` is more powerful than `tr`. With `sed` we can fine tune the pattern that we want replaced. Since all the "M"'s that we do want replaced are preceded (and followed by) a tab, we can use that. Here, we are briefly going to brush against [regular expressions](https://www.grymoire.com/Unix/Regular.html). In unix, we can represent a tab with `\t`, which is a regular expression.
 ```bash
-sed -i 's/\tM/male/g' example_data.txt
+sed -i 's/\tM/\tmale/g' example_data.txt
 
-sed -i 's/\tF/female/g' example_data.txt
+sed -i 's/\tF/\tfemale/g' example_data.txt
 ```
 Let's check to see if this fixes the problem. `cat example_data.txt`.
 ```bash
-[output]
+Baby_name       Sex     Birth_mass_kg
+Catalina        female  3.5
+Hannah  female  3.5
+Izy     female  3.5
+Jonathan        male    3.5
+Megan   female  3.5
+Melia   female  3.5
+Prashant        male    3.5
+Teresa  female  3.5
+Trixie  female  3.5
+William male    4.5
 ```
 
 Let's ask another question: How many babies of each mass were born?
@@ -113,7 +144,9 @@ cat example_data.txt | cut -f 3 | sort | uniq -c
 ```
 We should get
 ```bash
-[output]
+9 3.5
+1 4.5
+1 Birth_mass_kg
 ```
 4.5kg!? Wow, that is a big baby! With this dataset, figuring out which baby has a mass of 4.5kg is easy. We would simply `cat` the file and figure it out. But if we had hundreds of enteries in the file, that approach would not be feasible. Instead, we could pull that line out of file with `grep`. [Grep](https://en.wikipedia.org/wiki/Grep) is an acronym for "Globally search for Regular Expression and Print matching lines"; however, I think of it as a [corruption](http://www.artandpopularculture.com/Corruption_%28linguistics%29) of the word "grab". Thus, `grep` grabs and prints what we ask for.
 ```bash
