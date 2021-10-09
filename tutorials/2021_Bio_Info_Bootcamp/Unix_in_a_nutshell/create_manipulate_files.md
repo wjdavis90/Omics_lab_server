@@ -1,6 +1,6 @@
 # Creating and manipulating files
 
-Several types of files exist and, usually, the kind we will be dealing with are [regular files](https://en.wikipedia.org/wiki/Unix_file_types). Regualr files come in several flavors that are usually denoted by their [filename extension](https://en.wikipedia.org/wiki/Filename_extension). This is where one of the key features of unix comes into play: Most of the files we will be working with will be some form of a text file. The "simplest" is a [plain text file](https://en.wikipedia.org/wiki/Plain_text), but this also includes [vcf files](https://samtools.github.io/hts-specs/VCFv4.2.pdf) and [fasta files](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp). Remember, unix is built around manipulating text files, which means any command that will work on a vcf file will work equally well on a fasta file or any other kind of text file. Thus, unix has near universal compatability and be applied to many of our bioinformatic needs.
+Several types of files exist and, usually, the kind we will be dealing with are [regular files](https://en.wikipedia.org/wiki/Unix_file_types). Regualr files come in several flavors that are usually denoted by their [filename extension](https://en.wikipedia.org/wiki/Filename_extension). This is where one of the key features of unix comes into play: Most of the files we will be working with will be some form of a text file. The simplest is a [plain text file](https://en.wikipedia.org/wiki/Plain_text), but this also includes [vcf files](https://samtools.github.io/hts-specs/VCFv4.2.pdf) and [fasta files](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp). Remember, unix is built around manipulating text files, which means any command that will work on a vcf file will work equally well on a fasta file or any other kind of text file. Thus, unix has near universal compatability and can be applied to many of our bioinformatic needs.
 
 Before we go much further, some vocabulary:
 - stout: standard output; where the output of a command is going to go, which is usually the screen
@@ -21,7 +21,7 @@ echo "Hello, world!" > example.txt`.
 ```
 This command prints "Hello, world!" and writes it to the file "example.txt". That's it! You have created your first file!
 
-Now, most files we work with will be generated during the course of our analyses. If this is the result of a unix pipeline, then it will be created from stout using `>`. If it is from a program that is written to work within a unix environment (but is not a unix progrom itself), then it will like be genereated using `-o`, `-out`, or `-O` flags.
+Now, most files we work with will be generated during the course of our analyses. If this is the result of a unix pipeline, then it will be created from stout using `>`. If it is from a program that is written to work within a unix environment (but is not a unix progrom itself), then it will be genereated using `-o`, `-out`, or `-O` flags.
 
 ## Viewing files
 
@@ -50,7 +50,7 @@ echo "The Earth says Hello!" >> example.txt
 head example.txt
 ```
 
-We are going to move on to some more complicated means of manipulating files. Thus, you will need to download the [example_data.txt](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/example_data.txt) file. (As a sidenote, this example dataset is *not* [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html).) First, let's take a look at the file. For this file we could simply use cat and see the whole file at once. For large files, that usually is not practical. So, we will use head to determine what columns we are working with.
+We are going to move on to some more complicated means of manipulating files. Thus, you will need to download the [example_data.txt](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/example_data.txt) file. It wil be better to download it from the Google Drive folder rather than from GitHub.(As a sidenote, this example dataset is *not* [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html).) First, let's take a look at the file. For this file we could simply use cat and see the whole file at once. For large files, that usually is not practical. So, we will use head to determine what columns we are working with.
 ```bash
 head -n 1 example_data.txt
 ```
@@ -68,12 +68,7 @@ Here `cut` cuts the dataset to only the column we want. We specify the column by
  1 male
  1 Sex
 ```
-Well, that is interesting. There are two different coding systems being used! That is not ideal. We want the same coding system to be used for all the observations. We can make that happen using unix commands! 
-
-
-ok so at this point, I need to actually do this so I know what the output will be but I dont have access to the server and I am too lazy to go upstairs to make that happen. So, I'm going to outline what I want to do next.
-
-The simplest way to do this would be to use `tr`, which means "translate". It turns a character or set of characters into a different set. It is entirely approriate to use here, like so.
+Well, that is interesting. There are two different coding systems being used! That is not ideal. We want the same coding system to be used for all the observations. We can make that happen using unix commands! The simplest way to do this would be to use `tr`, which means "translate". It turns a character or set of characters into a different set. It is entirely approriate to use here, like so.
 ```bash
 cat example_data.txt | tr "male" "M" | tr "female" "F" > tidy_data.txt
 ```
