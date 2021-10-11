@@ -6,7 +6,7 @@
 
 3. [How to create and manipulate files within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/create_manipulate_files.md)
 
-4. [How to download/install within an unix/unix-like system]()
+4. [How to download/install within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/2021_Bio_Info_Bootcamp/Unix_in_a_nutshell/download_install.md)
 
 5. [How to set environmental variables and edit the bash profile within an unix/unix-like system](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
 
