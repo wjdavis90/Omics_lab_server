@@ -4,8 +4,8 @@ Several types of files exist and, usually, the kind we will be dealing with are 
 
 Before we go much further, some vocabulary:
 - stout: standard output; where the output of a command is going to go, which is usually the screen
-- stin: standard input
-- sterr: standard error
+- stdin: standard input
+- stderr: standard error
 - flag: this is usually a '-' followed by a letter (though it can also be a '--' followed by a word. Flags are used to change options within a unix command away from the default. For example, `mkdir ./example/` will make the directory "example" within the current working directory. But, if you want to create both a directory and a subdirectory at the same time, you would use the `-p` flag like so: `mkdir -p ./example/subdirectory/`. 
 - | allows us to turn the stout of one command into the stin of another
 - \> tells a command to write stout to a file rather than the screen
