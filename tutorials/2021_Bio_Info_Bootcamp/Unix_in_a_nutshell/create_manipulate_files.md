@@ -60,7 +60,7 @@ Anyway, back to the task at hand. How do we determine how many of each "Sex" the
 ```bash
 cat example_data.txt | cut -f 2 | sort | uniq -c
 ```
-Here `cut` cuts the dataset to only the column we want. We specify the column by its number using the `-f` flag. Another flag to be aware of with `cut` is `-d`, which tells `cut` what character separates the columns. By default it is tab. With `|` we route the stout into the next command `sort`, which arranges everything in alphabetical order. We pipe that stout into `uniq` that reduces the data to just unique values, and the `-c` flag tells `uniq` that we want a count of how many times each value appears. This is what we should get.
+Here `cut` cuts the dataset to only the column we want. We specify the column by its number using the `-f` flag. Another flag to be aware of with `cut` is `-d`, which tells `cut` what character separates the columns. By default it is tab. With `|` we route the stout into the next command `sort`, which arranges everything in lexicographical order (default). We pipe that stout into `uniq` that reduces the data to just unique values, and the `-c` flag tells `uniq` that we want a count of how many times each value appears. This is what we should get.
 ```bash
  6 F
  1 female
