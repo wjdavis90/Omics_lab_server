@@ -18,3 +18,18 @@ For packages that can be installed with conda, the typical command is `conda ins
 conda create -n bcftools
 conda install -n bdcftools -c bioconda bcftools
 ```
+
+# conda environments available on the server
+
+To view a list of the conda environments available on the server, use `conda info --envs` or `conda env list`.
+
+- VAMB
+- agat
+- bcftools
+- busco
+- catadaptenv
+- py-popgen
+- r_env
+- rsem
+- star
+- structure
