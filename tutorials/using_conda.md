@@ -1,3 +1,7 @@
+# Introduction
+
+[Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/index.html)
+
 # Using conda to install packages
 
 The code below describes how to initialize the conda in /scratch/Tools so that a user can use it. It can be copied and paste into terminal/console to be run.
