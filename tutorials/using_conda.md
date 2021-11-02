@@ -27,13 +27,16 @@ conda install -n bdcftools -c bioconda bcftools
 
 To view a list of the conda environments available on the server, use `conda info --envs` or `conda env list`.
 
-- VAMB
-- agat
-- bcftools
-- busco
+- [VAMB](https://github.com/RasmussenLab/vamb)
+- [agat](https://github.com/NBISweden/AGAT)
+- [bcftools](https://samtools.github.io/bcftools/bcftools.html)
+- [busco](https://busco.ezlab.org/)
 - catadaptenv
-- py-popgen
+- [py-popgen](https://pypi.org/project/py-popgen/)
 - r_env
 - rsem
 - star
-- structure
+- [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
+  - includes [fastStructure](https://github.com/rajanil/fastStructure)
+  - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
+- [admixture](https://dalexander.github.io/admixture/index.html)
