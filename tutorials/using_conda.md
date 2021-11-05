@@ -40,3 +40,4 @@ To view a list of the conda environments available on the server, use `conda inf
   - includes [fastStructure](https://github.com/rajanil/fastStructure)
   - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
 - [admixture](https://dalexander.github.io/admixture/index.html)
+- [raxml](https://github.com/stamatak/standard-RAxML)
