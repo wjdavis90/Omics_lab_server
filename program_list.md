@@ -157,3 +157,23 @@
 # Misc.
 - /opt/microsoft/omsagent/ruby/bin/ruby
 
+# conda environments available on the server
+
+To view a list of the conda environments available on the server, use `conda info --envs` or `conda env list`.
+
+- [VAMB](https://github.com/RasmussenLab/vamb)
+- [agat](https://github.com/NBISweden/AGAT)
+- [bcftools](https://samtools.github.io/bcftools/bcftools.html)
+- [busco](https://busco.ezlab.org/)
+- catadaptenv
+- [py-popgen](https://pypi.org/project/py-popgen/)
+- r_env
+- rsem
+- star
+- [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
+  - includes [fastStructure](https://github.com/rajanil/fastStructure)
+  - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
+- [admixture](https://dalexander.github.io/admixture/index.html)
+- [raxml](https://github.com/stamatak/standard-RAxML)
+
+
