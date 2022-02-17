@@ -17,12 +17,13 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- [OMICs lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) 
 	- [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html) 
 - angsd
-	- Path ``
+	- Add to PATH: 
 	- [Software page](http://www.popgen.dk/angsd/index.php/ANGSD)
 	- [OMICs lab tutorial]()
 - axtChain
 	- executable is in `/scratch/Tools/local/bin`
 - beast
+	- PATH `` 
 - bedtools
 	- static binary, must add '/scratch/Tools/' to your path
 - [Blast Taxonomy Annotator](https://github.com/Joseph7e/Assign-Taxonomy-with-BLAST)
