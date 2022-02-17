@@ -6,8 +6,127 @@
 
 **Tip:** If one installs a tool into `/scratch/Tools/`, it is helpful to run `chmod -R +777` on the directory or `chmod +777` on the executable. This ensures that other users have the ability to make changes such as adding packages (e.g., in R or conda), updating the version, or adding/updating databases. 
 
+**Tip:** Always check to see if a program is available as a [conda package](https://anaconda.org/) before installing it locally. If a conda package is available, please create a new environment and install it in to that environment, following the directions [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md). Once you have done so, please run `chmod -R +777 /scratch/Tools/anaconda3` to ensure that the next person who wants to install a conda package can.
 
-## /home/sangeet/UserDirectories/Sangeet/Tools/
+# /scratch/Tools
+
+This is a list of programs currently located in `/scratch/Tools/`. If you install a program there, please update this list (or contact someone who can edit this page to update it). I have also included links to software homepages, tutorials written by me, and tutorials that I have used written by others. Feel free to add/update tutorials.
+
+- anaconda3
+	- [Homepage](https://anaconda.org/)
+	- [OMICs lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) 
+	- [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html) 
+- angsd
+	- Path ``
+	- [Software page](http://www.popgen.dk/angsd/index.php/ANGSD)
+	- [OMICs lab tutorial]()
+- axtChain
+	- executable is in `/scratch/Tools/local/bin`
+- beast
+- bedtools
+	- static binary, must add '/scratch/Tools/' to your path
+- [Blast Taxonomy Annotator](https://github.com/Joseph7e/Assign-Taxonomy-with-BLAST)
+- ContamFinder1.1.1
+- cutadapt-3.4
+- diamond
+- Dsuite
+	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before trying to run.
+	- Program packages are in `/Build/` and plotting is in `/utils/`.
+  - The instructions can be found [here](https://github.com/millanek/Dsuite) and there is a [tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
+- EMBOSS
+	- The executables are in `/scratch/Tools/local/bin`
+- exonerate 2.2.0
+- FastTreeMP
+	- static binary, must add '/scratch/Tools/' to your path
+- gatk-4.2.0.0
+- genus_assigner
+- ghostx-1.3.7
+-  G-Phocs
+- gsl-2.6
+- htslib
+- GCC 4.9.4
+	- The executables are in `/scratch/Tools/local/bin`
+- lastz
+- mira
+- MITObim
+	- must add mira to your path for MITObim to work 
+- msmc-tools
+- parallel-20210522
+- [py-popgen](https://ppp.readthedocs.io/en/latest/PPP_pages/intro.html)
+	- as a conda environment
+	- to use `conda activate py-popgen`
+- QuIBL
+- R 4.1.0
+	- This is available as a conda enironment. See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_R_in_conda.md) for instructions on how to activate the environment and use R within that environment.
+	- See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/available_R_packages.md) for a list of available packages 
+- Qiime2
+	- not fully installed yet
+- SCGid
+	- not fully installed yet
+- SequenceTools
+- snapp_prep-master
+- Stacks 2.58
+	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before running
+- treemix-1.13
+	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib/:/scratch/Tools/local/lib64/` before running
+- TrimGalore-0.6.6
+- [VAMB](https://github.com/RasmussenLab/vamb)
+	- to use `conda activate VAMB`
+
+## /scratch/Tools/scripts
+- analyze_tree_asymmetry.rb
+- blast_taxonomy_report.pl
+- construct_unaln_files_180325.pl
+- extract_blocks.rb
+- fastaToTab
+- fill_seq.rb
+- getClassFasta.pl
+- get_fixed_site_gts.rb
+- get_number_of_pi_sites.rb
+- get_number_of_variable_sites.rb
+- get_parsimony_score.sh
+- gff3ToFasta
+- mask_imputed_gts.rb
+- [parallelLastz.pl](https://github.com/jnarayan81/parallelLastz)
+- plot_d.rb
+- plot_f4ratio.rb
+- plot_fixed_site_gts.rb
+- plot_ggi.rb
+- plotInvestigateResults.R
+- plot_tree_asymmetry.rb
+- print_tetramer_freqs_deg_filter_esom_VD.pl
+- remove_seqs_if_all_gap.py
+- summarize_ggi.sh
+- tabToFasta
+- vcf2phylip.py
+	- From [here](https://github.com/edgardomortiz/vcf2phylip)
+- remove_small_contigs.pl
+	- From [here](https://github.com/elyons/BioInfoUtility)
+
+# Misc.
+- /opt/microsoft/omsagent/ruby/bin/ruby
+
+# conda environments available on the server
+
+To view a list of the conda environments available on the server, use `conda info --envs` or `conda env list`.
+
+- [VAMB](https://github.com/RasmussenLab/vamb)
+- [agat](https://github.com/NBISweden/AGAT)
+- [bcftools](https://samtools.github.io/bcftools/bcftools.html)
+- [busco](https://busco.ezlab.org/)
+- catadaptenv
+- [py-popgen](https://pypi.org/project/py-popgen/)
+- r_env
+- rsem
+- star
+- [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
+  - includes [fastStructure](https://github.com/rajanil/fastStructure)
+  - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
+- [admixture](https://dalexander.github.io/admixture/index.html)
+- [raxml](https://github.com/stamatak/standard-RAxML)
+
+
+# /home/sangeet/UserDirectories/Sangeet/Tools/
 
 - admixture_linux-1.3.0
 - AGAT
@@ -63,117 +182,5 @@
 - trinityrnaseq-v2.9.1
 - v0.3.0.tar.gz
 - vcftools_0.1.13
-
-# /scratch/Tools
-- anaconda3
-  - Please see the [instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) on how to activate and initialize conda before use.
-- [agat](https://github.com/NBISweden/AGAT)
-  - use `conda activate agat`
-- angsd
-- axtChain
-	- executable is in `/scratch/Tools/local/bin`
-- beast
-- bedtools
-	- static binary, must add '/scratch/Tools/' to your path
-- [Blast Taxonomy Annotator](https://github.com/Joseph7e/Assign-Taxonomy-with-BLAST)
-	- to use `conda activate blast_taxonomy_annotator`
-- ContamFinder1.1.1
-- cutadapt-3.4
-- diamond
-- Dsuite
-	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before trying to run.
-	- Program packages are in `/Build/` and plotting is in `/utils/`.
-  - The instructions can be found [here](https://github.com/millanek/Dsuite) and there is a [tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
-- EMBOSS
-	- The executables are in `/scratch/Tools/local/bin`
-- exonerate 2.2.0
-- FastTreeMP
-	- static binary, must add '/scratch/Tools/' to your path
-- gatk-4.2.0.0
-- genus_assigner
-- ghostx-1.3.7
--  G-Phocs
-- gsl-2.6
-- htslib
-- GCC 4.9.4
-	- The executables are in `/scratch/Tools/local/bin`
-- lastz
-- mira
-- MITObim
-	- must add mira to your path for MITObim to work 
-- msmc-tools
-- parallel-20210522
-- [py-popgen](https://ppp.readthedocs.io/en/latest/PPP_pages/intro.html)
-	- as a conda environment
-	- to use `conda activate py-popgen`
-- QuIBL
-- R 4.1.0
-	- This is available as a conda enironment. See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_R_in_conda.md) for instructions on how to activate the environment and use R within that environment.
-	- See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/available_R_packages.md) for a list of available packages 
-- Qiime2
-	- not fully installed yet
-- SCGid
-	- not fully installed yet
-- SequenceTools
-- snapp_prep-master
-- Stacks 2.58
-	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before running
-- treemix-1.13
-	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib/:/scratch/Tools/local/lib64/` before running
-- TrimGalore-0.6.6
-- [VAMB](https://github.com/RasmussenLab/vamb)
-	- to use `conda activate VAMB`
-
-# /scratch/Tools/scripts
-- analyze_tree_asymmetry.rb
-- blast_taxonomy_report.pl
-- construct_unaln_files_180325.pl
-- extract_blocks.rb
-- fastaToTab
-- fill_seq.rb
-- getClassFasta.pl
-- get_fixed_site_gts.rb
-- get_number_of_pi_sites.rb
-- get_number_of_variable_sites.rb
-- get_parsimony_score.sh
-- gff3ToFasta
-- mask_imputed_gts.rb
-- [parallelLastz.pl](https://github.com/jnarayan81/parallelLastz)
-- plot_d.rb
-- plot_f4ratio.rb
-- plot_fixed_site_gts.rb
-- plot_ggi.rb
-- plotInvestigateResults.R
-- plot_tree_asymmetry.rb
-- print_tetramer_freqs_deg_filter_esom_VD.pl
-- remove_seqs_if_all_gap.py
-- summarize_ggi.sh
-- tabToFasta
-- vcf2phylip.py
-	- From [here](https://github.com/edgardomortiz/vcf2phylip)
-- remove_small_contigs.pl
-	- From [here](https://github.com/elyons/BioInfoUtility)
-
-# Misc.
-- /opt/microsoft/omsagent/ruby/bin/ruby
-
-# conda environments available on the server
-
-To view a list of the conda environments available on the server, use `conda info --envs` or `conda env list`.
-
-- [VAMB](https://github.com/RasmussenLab/vamb)
-- [agat](https://github.com/NBISweden/AGAT)
-- [bcftools](https://samtools.github.io/bcftools/bcftools.html)
-- [busco](https://busco.ezlab.org/)
-- catadaptenv
-- [py-popgen](https://pypi.org/project/py-popgen/)
-- r_env
-- rsem
-- star
-- [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
-  - includes [fastStructure](https://github.com/rajanil/fastStructure)
-  - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
-- [admixture](https://dalexander.github.io/admixture/index.html)
-- [raxml](https://github.com/stamatak/standard-RAxML)
 
 
