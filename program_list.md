@@ -1,6 +1,6 @@
 # Master list of programs
 
-**Purpose:** This document is a list all programs/tools on the server and the PATH to them. It is also annotated to include special directions for running a program if need be.
+**Purpose:** This document is a list all programs/tools on the server and the PATH to the executable. It is also annotated to include special directions for running a program if need be.
 
 **Tip:** If one is going to be using one of these programs regularly, it is recommended one edits one's `.bash_profile` file in one's home directory to export it to PATH every time one logs in. [Instructions on how to do so](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/setting_PATH.md)
 
@@ -14,28 +14,41 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 
 - anaconda3
 	- [Homepage](https://anaconda.org/)
-	- [OMICs lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) 
+	- [Using conda on the 'Omics lab server](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md) 
 	- [conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html) 
 - angsd
-	- Add to PATH: 
+	- Add to PATH: `/scratch/Tools/angsd`
+	- Add to PATH `/scratch/Tools/angsd/misc`
 	- [Software page](http://www.popgen.dk/angsd/index.php/ANGSD)
 	- [OMICs lab tutorial]()
-- axtChain
-	- executable is in `/scratch/Tools/local/bin`
+- Assign Taxonomy with BLAST
+	- Add `/scratch/Tools/Assign-Taxonomy-with-BLAST` to PATH
+	- [Homepage](https://github.com/Joseph7e/Assign-Taxonomy-with-BLAST) 
 - beast
-	- PATH `` 
+	- PATH `/scratch/Tools/beast/bin`
+	- Beast has a wonderful [home page](http://www.beast2.org/) with lots of help options. It also has many, many [tutorials](https://www.beast2.org/tutorials/) available for it.
+
 - bedtools
 	- static binary, must add '/scratch/Tools/' to your path
-- [Blast Taxonomy Annotator](https://github.com/Joseph7e/Assign-Taxonomy-with-BLAST)
-- ContamFinder1.1.1
-- cutadapt-3.4
+	- [Bedtools has good online documentation](https://bedtools.readthedocs.io/en/latest/)
+	- [Some of examples of how the 'Omics lab uses bedtools]()
+- blast2bed
+	- Add `/scratch/Tools/blast2bed` to your path
+- blat
+	- Add `/scratch/Tools/blat` to your path	 
+- bwa
+	- Add to PATH  `/scratch/Tools/bwa`
 - diamond
+	-  static binary, must add '/scratch/Tools/' to your path
+	-  Use with the script 
+- docker
+	- Talk to Sangeet about using this 
 - Dsuite
+	- Add to Path ` `
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before trying to run.
 	- Program packages are in `/Build/` and plotting is in `/utils/`.
   - The instructions can be found [here](https://github.com/millanek/Dsuite) and there is a [tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
-- EMBOSS
-	- The executables are in `/scratch/Tools/local/bin`
+- easySFS
 - exonerate 2.2.0
 - FastTreeMP
 	- static binary, must add '/scratch/Tools/' to your path
@@ -74,6 +87,324 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - [VAMB](https://github.com/RasmussenLab/vamb)
 	- to use `conda activate VAMB`
 
+## /scratch/Tools/local/bin
+
+Some tools are usually installed in `/usr/bin/local/`. Since we do not have read write access, I created `/scratch/Tools/local/bin` in order to be able to install them. This is a list of the programs available in `/scratch/Tools/local/bin`.
+
+## /scratch/Tools/ucsc_genome_browser_tools
+
+All of the tools from the [University of California Santa Cruz Genome Browser](https://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) are located here. This [site](https://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) also contains the manual pages for each program.
+
+- addCols    
+- ameme      
+- autoDtd    
+- autoSql    
+- autoXml    
+- ave   
+- aveCols    
+- axtChain     
+- axtSort    
+- axtSwap    
+- axtToMaf     
+- axtToPsl     
+- bamToPsl     
+- barChartMaxLimit     
+- bedClip    
+- bedCommonRegions     
+- bedCoverage  
+- bedExtendRanges  
+- bedGeneParts    
+- bedGraphPack    
+- bedGraphToBigWig     
+- bedIntersect    
+- bedItemOverlapCount 
+- bedJoinTabOffset     
+- bedJoinTabOffset.py     
+- bedMergeAdjacent     
+- bedPartition    
+- bedPileUps      
+- bedRemoveOverlap     
+- bedRestrictToPositions     
+- bedSort    
+- bedToBigBed     
+- bedToExons      
+- bedToGenePred 
+- bedToPsl     
+- bedWeedOverlapping      
+- bigBedInfo      
+- bigBedNamedItems     
+- bigBedSummary   
+- bigBedToBed     
+- bigGenePredToGenePred  
+- bigHeat    
+- bigMafToMaf     
+- bigPslToPsl     
+- bigWigAverageOverBed       
+- bigWigCat       
+- bigWigCluster   
+- bigWigCorrelate      
+- bigWigInfo      
+- bigWigMerge     
+- bigWigSummary   
+- bigWigToBedGraph     
+- bigWigToWig     
+- binFromRange   
+- blastToPsl      
+- blastXmlToPsl   
+- blat
+- calc       
+- catDir     
+- catUncomment    
+- chainAntiRepeat      
+- chainBridge     
+- chainCleaner    
+- chainFilter     
+- chainMergeSort       
+- chainNet     
+- chainPreNet     
+- chainScore      
+- chainSort       
+- chainSplit      
+- chainStitchId   
+- chainSwap       
+- chainToAxt      
+- chainToPsl      
+- chainToPslBasic      
+- checkAgpAndFa   
+- checkCoverageGaps  
+- checkHgFindSpec      
+- checkTableCoords   
+- chopFaLines     
+- chromGraphFromBin 
+- chromGraphToBin       
+- chromToUcsc     
+- clusterGenes     
+- clusterMatrixToBarChartBed  
+- colTransform    
+- countChars      
+- cpg_lh      
+- crTreeIndexBed       
+- crTreeSearchBed      
+- dbSnoop    
+- dbTrash     
+- endsInLf     
+- estOrient        
+- expMatrixToBarchartBed      
+- faAlign    
+- faCmp      
+- faCount    
+- faFilter     
+- faFilterN       
+- faFrag     
+- faNoise    
+- faOneRecord     
+- faPolyASizes    
+- faRandomize     
+- faRc       
+- faSize     
+- faSomeRecords   
+- faSplit    
+- faToFastq       
+- faToTab    
+- faToTwoBit      
+- faToVcf    
+- faTrans    
+- fastqStatsAndSubsample     
+- fastqToFa       
+- featureBits      
+- fetchChromSizes      
+- findMotif       
+- fixStepToBedGraph.pl       
+- gapToLift        
+- genePredCheck    
+- genePredFilter   
+- genePredHisto    
+- genePredSingleCover      
+- genePredToBed    
+- genePredToBigGenePred       
+- genePredToFakePsl   
+- genePredToGtf    
+- genePredToMafFrames      
+- genePredToProt   
+- gensub2    
+- getRna      
+- getRnaPred       
+- gff3ToGenePred   
+- gff3ToPsl       
+- gmtime     
+- gtfToGenePred    
+- headRest     
+- hgBbiDbLink     
+- hgFakeAgp       
+- hgFindSpec       
+- hgGcPercent      
+- hgGoldGapGl      
+- hgLoadBed        
+- hgLoadChain      
+- hgLoadGap        
+- hgLoadMaf        
+- hgLoadMafSummary      
+- hgLoadNet        
+- hgLoadOut        
+- hgLoadOutJoined       
+- hgLoadSqlTab    
+- hgLoadWiggle     
+- hgSpeciesRna     
+- hgTrackDb        
+- hgWiggle      
+- hgsql      
+- hgsqldump       
+- hgvsToVcf        
+- hicInfo     
+- htmlCheck       
+- hubCheck      
+- hubClone      
+- hubPublicCheck   
+- ixIxx      
+- lastz-1.04.00 
+- lastz_D-1.04.00    
+- lavToAxt     
+- lavToPsl     
+- ldHgGene      
+- liftOver      
+- liftOverMerge   
+- liftUp      
+- linesToRa       
+- localtime        
+- mafAddIRows     
+- mafAddQRows     
+- mafCoverage      
+- mafFetch      
+- mafFilter       
+- mafFrag     
+- mafFrags      
+- mafGene     
+- mafMeFirst      
+- mafNoAlign      
+- mafOrder     
+- mafRanges       
+- mafSpeciesList       
+- mafSpeciesSubset     
+- mafSplit     
+- mafSplitPos      
+- mafToAxt     
+- mafToBigMaf     
+- mafToPsl     
+- mafToSnpBed      
+- mafsInRegion    
+- makeTableList    
+- maskOutFa       
+- matrixClusterColumns       
+- matrixMarketToTsv       
+- matrixNormalize      
+- mktime     
+- mrnaToGene       
+- netChainSubset       
+- netClass      
+- netFilter       
+- netSplit     
+- netSyntenic     
+- netToAxt     
+- netToBed     
+- newProg    
+- newPythonProg   
+- nibFrag    
+- nibSize    
+- oligoMatch      
+- overlapSelect    
+- para       
+- paraFetch       
+- paraHub    
+- paraHubStop     
+- paraNode     
+- paraNodeStart   
+- paraNodeStatus       
+- paraNodeStop    
+- paraSync     
+- paraTestJob     
+- parasol    
+- positionalTblCheck       
+- pslCDnaFilter    
+- pslCat     
+- pslCheck      
+- pslDropOverlap       
+- pslFilter       
+- pslHisto     
+- pslLiftSubrangeBlat      
+- pslMap     
+- pslMapPostChain      
+- pslMrnaCover    
+- pslPairs     
+- pslPartition    
+- pslPosTarget    
+- pslPretty       
+- pslRc      
+- pslRecalcMatch       
+- pslRemoveFrameShifts       
+- pslReps    
+- pslScore     
+- pslSelect       
+- pslSomeRecords       
+- pslSort    
+- pslSortAcc      
+- pslStats     
+- pslSwap    
+- pslToBed     
+- pslToBigPsl      
+- pslToChain      
+- pslToPslx       
+- pslxToFa     
+- qaToQac    
+- qacAgpLift      
+- qacToQa    
+- qacToWig     
+- raSqlQuery       
+- raToLines       
+- raToTab    
+- randomLines     
+- rmFaDups     
+- rmskAlignToPsl       
+- rowsToCols      
+- sizeof     
+- spacedToTab     
+- splitFile       
+- splitFileByColumn       
+- sqlToXml     
+- strexCalc       
+- stringify       
+- subChar    
+- subColumn       
+- tabQuery     
+- tailLines       
+- tdbQuery      
+- tdbRename       
+- tdbSort    
+- textHistogram   
+- tickToDate      
+- toLower    
+- toUpper    
+- trackDbIndexBb   
+- transMapPslToGenePred       
+- trfBig     
+- twoBitDup       
+- twoBitInfo      
+- twoBitMask      
+- twoBitToFa      
+- ucscApiClient   
+- udr    
+- vai.pl   
+- validateFiles    
+- validateManifest     
+- varStepToBedGraph.pl       
+- vcfToBed     
+- webSync  
+- wigCorrelate    
+- wigEncode       
+- wigToBigWig     
+- wordLine     
+- xmlCat     
+- xmlToSql
+
 ## /scratch/Tools/scripts
 - analyze_tree_asymmetry.rb
 - blast_taxonomy_report.pl
@@ -110,6 +441,8 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 # conda environments available on the server
 
 To view a list of the conda environments available on the server, use `conda info --envs` or `conda env list`.
+
+**NOTE:** After installing programs into a conda environment, one **MUST** run `chmod -R +777 /scratch/Tools/anaconda3` This ensures that other users can install a conda package after you.
 
 - [VAMB](https://github.com/RasmussenLab/vamb)
 - [agat](https://github.com/NBISweden/AGAT)
