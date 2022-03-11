@@ -39,57 +39,82 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - bwa
 	- Add to PATH  `/scratch/Tools/bwa`
 - diamond
-	-  static binary, must add '/scratch/Tools/' to your path
-	-  Use with the script 
+	-  static binary, must add `/scratch/Tools/` to your path
+	-  Use with the script [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6)
 - docker
 	- Talk to Sangeet about using this 
 - Dsuite
-	- Add to Path ` `
+	- Add to Path `/scratch/Tools/Dsuite/Build`
+	- Add to Path `/scratch/Tools/Dsuite/utils/`
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before trying to run.
-	- Program packages are in `/Build/` and plotting is in `/utils/`.
-  - The instructions can be found [here](https://github.com/millanek/Dsuite) and there is a [tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
-- easySFS
+	- [Homepage](https://github.com/millanek/Dsuite)
+	- [Online tutorial](https://github.com/millanek/tutorials/tree/master/analysis_of_introgression_with_snp_data)
+- EMBOSS
+	- The executables are in `/scratch/Tools/local/bin`
+-  easySFS
 - exonerate 2.2.0
+	- Add to Path `/scratch/Tools/exonerate-2.2.0-x86_64/bin/`
+- fastPHASE
+	- static binary, must add `/scratch/Tools/` to your path
+- FastQC
+	- Add to Path `/scratch/Tools/FastQC/`
 - FastTreeMP
-	- static binary, must add '/scratch/Tools/' to your path
+	- static binary, must add `/scratch/Tools/` to your path
+	- [Home page](http://www.microbesonline.org/fasttree/#How)
 - gatk-4.2.0.0
-- genus_assigner
+	- Add to path `/scratch/Tools/gatk-4.2.0.0/'
+	- [Home page](https://gatk.broadinstitute.org/hc/en-us)
+- gcc 4.9.4
+	- The executables are in `/scratch/Tools/local/bin` 
+-  genus_assigner
 - ghostx-1.3.7
--  G-Phocs
+	- Add to path `/scratch/Tools/ghostx-1.3.7/src/`
+	- Use with the script [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6)
+- G-Phocs
 - gsl-2.6
 - htslib
-- GCC 4.9.4
-	- The executables are in `/scratch/Tools/local/bin`
-- lastz
+- hal
+-	- [Home page](https://github.com/ComparativeGenomicsToolkit/hal/blob/master/README.md)
+- hmmer
+	- Add to path `/scratch/Tools/hmmer-3.3.2/bin/`
+	- [Wonderful manual](http://eddylab.org/software/hmmer/Userguide.pdf)
+- maker
+	- [Home page]()
+	- [Online tutorial](https://github.com/Michigan-Mycology/Lab-Code-and-Hacks/tree/master/Genomics/Maker_pipeline) 
 - mira
+	- Add to path `/scratch/Tools/mira_4.0.2_linux-gnu_x86_64_static/bin/`
 - MITObim
 	- must add mira to your path for MITObim to work 
+- mmseqs
+	- Use with the script [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6)
 - msmc-tools
-- parallel-20210522
-- [py-popgen](https://ppp.readthedocs.io/en/latest/PPP_pages/intro.html)
-	- as a conda environment
-	- to use `conda activate py-popgen`
+- parallel
+	- The executables are in `/scratch/Tools/local/bin`
+	- Very, very handy tool that replaces for loops
+	- [Helpful online manual]()
+	- ['Omics lab tutorial]()
+- picard.jar
+- proj-8.1.0
 - QuIBL
-- R 4.1.0
-	- This is available as a conda enironment. See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_R_in_conda.md) for instructions on how to activate the environment and use R within that environment.
-	- See [here](https://github.com/wjdavis90/Omics_lab_server/blob/main/available_R_packages.md) for a list of available packages 
-- Qiime2
-	- not fully installed yet
-- SCGid
-	- not fully installed yet
+- RAiSD
 - SequenceTools
+	- Add to Path `/scratch/Tools/SequenceTools`
+	- This is where [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6) lives
+	- Useful for doing fast ortholog searches
 - snapp_prep-master
+	- Add to path `/scratch/Tools/snapp_prep-master`
+	- [Online tutorial](https://github.com/elsemikk/tutorials/blob/master/divergence_time_estimation/README.md)
+	- From [Stange et al. 2018](https://doi.org/10.1093/sysbio/syy006).
 - Stacks 2.58
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before running
+	- The executables are in `/scratch/Tools/local/bin`
+- snpEff
+	- [Home page]()
+	- ['Omics lab tutorial]() 
 - treemix-1.13
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib/:/scratch/Tools/local/lib64/` before running
+	- The executables are in `/scratch/Tools/local/bin`
 - TrimGalore-0.6.6
-- [VAMB](https://github.com/RasmussenLab/vamb)
-	- to use `conda activate VAMB`
-
-## /scratch/Tools/local/bin
-
-Some tools are usually installed in `/usr/bin/local/`. Since we do not have read write access, I created `/scratch/Tools/local/bin` in order to be able to install them. This is a list of the programs available in `/scratch/Tools/local/bin`.
 
 ## /scratch/Tools/ucsc_genome_browser_tools
 
@@ -444,11 +469,19 @@ To view a list of the conda environments available on the server, use `conda inf
 
 **NOTE:** After installing programs into a conda environment, one **MUST** run `chmod -R +777 /scratch/Tools/anaconda3` This ensures that other users can install a conda package after you.
 
-- [VAMB](https://github.com/RasmussenLab/vamb)
+- [admixture](https://dalexander.github.io/admixture/index.html)
 - [agat](https://github.com/NBISweden/AGAT)
 - [bcftools](https://samtools.github.io/bcftools/bcftools.html)
 - [busco](https://busco.ezlab.org/)
 - catadaptenv
+- haltools
+- metagenomics
+	- includes cutaadapt 1.18
+	- fastqc
+	- hmmer
+	- mafft
+	- megahit
+	- metaxa
 - [py-popgen](https://pypi.org/project/py-popgen/)
 - r_env
 - rsem
@@ -456,7 +489,7 @@ To view a list of the conda environments available on the server, use `conda inf
 - [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
   - includes [fastStructure](https://github.com/rajanil/fastStructure)
   - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
-- [admixture](https://dalexander.github.io/admixture/index.html)
+
 - [raxml](https://github.com/stamatak/standard-RAxML)
 
 
