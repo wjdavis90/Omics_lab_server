@@ -22,7 +22,7 @@ Then we can do all three. It turns out that order is critical! (Not that the man
 ```bash
 realSFS fst index population1.saf.idx population2.saf.idx population3.saf.idx -sfs 2dsfs.population1.population2 -sfs 2dsfs.population1.population3 -sfs 2dsfs.population2.population3 -fstout your.output.name.pbs -whichFST 1
 ```
-After that is complete, we can get population branch statistic values on a per window basis. The standard window size is 15,000.
+After that is complete, we can get population branch statistic values on a per window basis. The standard window size is 15,000. To get per SNP/site values, use a window and step size of 1.
 ```bash
 realSFS fst your.output.name.fst.idx -win 15000 -step 15000 -whichFST 1 > final.output.name
 ```
