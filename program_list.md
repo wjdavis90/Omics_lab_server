@@ -61,7 +61,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- static binary, must add `/scratch/Tools/` to your path
 	- [Home page](http://www.microbesonline.org/fasttree/#How)
 - gatk-4.2.0.0
-	- Add to path `/scratch/Tools/gatk-4.2.0.0/'
+	- Add to path `/scratch/Tools/gatk-4.2.0.0/`
 	- [Home page](https://gatk.broadinstitute.org/hc/en-us)
 - gcc 4.9.4
 	- The executables are in `/scratch/Tools/local/bin` 
