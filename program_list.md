@@ -39,7 +39,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- Add to PATH  `/scratch/Tools/bwa`
 - diamond
 	-  static binary, must add `/scratch/Tools/` to your path
-	-  Use with the script [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6)
+	-  Use with the script [getRBH.pl](https://github.com/Computational-conSequences/SequenceTools), which was developed by [Hernández-Salmerón & Moreno-Hagelsieb 2020](https://doi.org/10.1186/s12864-020-07132-6)
 - docker
 	- Talk to Sangeet about using this 
 - Dsuite
@@ -68,7 +68,6 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - genus_assigner
 - ghostx-1.3.7
 	- Add to path `/scratch/Tools/ghostx-1.3.7/src/`
-	- Use with the script [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6)
 - G-Phocs
 - gsl-2.6
 - htslib
@@ -85,12 +84,12 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - MITObim
 	- must add mira to your path for MITObim to work 
 - mmseqs
-	- Use with the script [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6)
+	- Use with the script [getRBH.pl](https://github.com/Computational-conSequences/SequenceTools), which was developed by [Hernández-Salmerón & Moreno-Hagelsieb 2020](https://doi.org/10.1186/s12864-020-07132-6)
 - msmc-tools
 - parallel
 	- The executables are in `/scratch/Tools/local/bin`
 	- Very, very handy tool that replaces for loops
-	- [Helpful online manual]()
+	- [Helpful online manual](https://www.gnu.org/software/parallel/sphinx.html)
 	- ['Omics lab tutorial]()
 - picard.jar
 - proj-8.1.0
@@ -108,7 +107,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib64/` before running
 	- The executables are in `/scratch/Tools/local/bin`
 - snpEff
-	- [Home page]()
+	- [Home page](http://pcingola.github.io/SnpEff/)
 	- ['Omics lab tutorial]() 
 - treemix-1.13
 	- Must do `export LD_LIBRARY_PATH=/scratch/Tools/local/lib/:/scratch/Tools/local/lib64/` before running
