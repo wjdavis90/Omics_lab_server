@@ -118,7 +118,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 ## /scratch/Tools/ucsc_genome_browser_tools
 
 All of the tools from the [University of California Santa Cruz Genome Browser](https://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) are located here. This [site](https://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) also contains the manual pages for each program.
-<div class="begin-examples"></div>
+<div></div>
 - addCols    
 - ameme      
 - autoDtd    
@@ -428,7 +428,8 @@ All of the tools from the [University of California Santa Cruz Genome Browser](h
 - wordLine     
 - xmlCat     
 - xmlToSql
-<div class="end-examples"></div>
+<div></div>
+
 ## /scratch/Tools/scripts
 - analyze_tree_asymmetry.rb
 - blast_taxonomy_report.pl
