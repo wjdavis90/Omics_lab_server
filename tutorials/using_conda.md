@@ -27,21 +27,26 @@ conda install -n bdcftools -c bioconda bcftools
 
 To view a list of the conda environments available on the server, use `conda info --envs` or `conda env list`.
 
-- [VAMB](https://github.com/RasmussenLab/vamb)
+**NOTE:** After installing programs into a conda environment, one **MUST** run `chmod -R +777 /scratch/Tools/anaconda3` This ensures that other users can install a conda package after you.
+
 - [admixture](https://dalexander.github.io/admixture/index.html)
 - [agat](https://github.com/NBISweden/AGAT)
 - [bcftools](https://samtools.github.io/bcftools/bcftools.html)
 - [busco](https://busco.ezlab.org/)
-- [cactus](https://github.com/ComparativeGenomicsToolkit/cactus)
-  -May not work/don't use 
 - catadaptenv
-- [haltools](https://github.com/ComparativeGenomicsToolkit/hal)_
-- [hapflk](https://github.com/bcm-uga/SSMPG2017/blob/master/Presentations/hapflk/hapflk.org)
+- haltools
+- metagenomics
+	- includes cutaadapt 1.18
+	- fastqc
+	- hmmer
+	- mafft
+	- megahit
+	- metaxa
 - [py-popgen](https://pypi.org/project/py-popgen/)
 - r_env
-- [raxml](https://github.com/stamatak/standard-RAxML)
 - rsem
 - star
 - [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
   - includes [fastStructure](https://github.com/rajanil/fastStructure)
-  - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
+  - includes [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
+- [raxml](https://github.com/stamatak/standard-RAxML)
