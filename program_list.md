@@ -488,7 +488,7 @@ To view a list of the conda environments available on the server, use `conda inf
 - star
 - [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
   - includes [fastStructure](https://github.com/rajanil/fastStructure)
-  - [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
+  - includes [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
 
 - [raxml](https://github.com/stamatak/standard-RAxML)
 
