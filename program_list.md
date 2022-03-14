@@ -20,18 +20,18 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- Add to PATH: `/scratch/Tools/angsd`
 	- Add to PATH `/scratch/Tools/angsd/misc`
 	- [Software page](http://www.popgen.dk/angsd/index.php/ANGSD)
-	- [OMICs lab tutorial]()
+	- [OMICs lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/angsd.md)
 - Assign Taxonomy with BLAST
 	- Add `/scratch/Tools/Assign-Taxonomy-with-BLAST` to PATH
 	- [Homepage](https://github.com/Joseph7e/Assign-Taxonomy-with-BLAST) 
 - beast
 	- PATH `/scratch/Tools/beast/bin`
 	- Beast has a wonderful [home page](http://www.beast2.org/) with lots of help options. It also has many, many [tutorials](https://www.beast2.org/tutorials/) available for it.
-
+	- It is probably better to use th [CIPRES](https://www.phylo.org/) server.
 - bedtools
 	- static binary, must add '/scratch/Tools/' to your path
 	- [Bedtools has good online documentation](https://bedtools.readthedocs.io/en/latest/)
-	- [Some of examples of how the 'Omics lab uses bedtools]()
+	- [Some of examples of how the 'Omics lab uses bedtools](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/bedtools.md)
 - blast2bed
 	- Add `/scratch/Tools/blast2bed` to your path
 - blat
@@ -526,6 +526,7 @@ To view a list of the conda environments available on the server, use `conda inf
 - Miniconda
 - myconfig.ini
 - ncbi-blast-2.10.0+
+	-['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/blast_quick_guide.md) 
 - obsutil_linux_amd64_5.1.13
 - OrthoFinder_2.3
 - OrthoFinder-2.5.2
