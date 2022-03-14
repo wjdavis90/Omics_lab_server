@@ -474,21 +474,22 @@ To view a list of the conda environments available on the server, use `conda inf
 - catadaptenv
 - haltools
 - metagenomics
-	- includes cutaadapt 1.18
+	- includes cutadapt 1.18
 	- fastqc
 	- hmmer
 	- [humann2](https://huttenhower.sph.harvard.edu/humann2/)
 	- [mafft](https://mafft.cbrc.jp/alignment/software/)
 	- megahit
+	- [metaphlan2](https://github.com/biobakery/biobakery/wiki/metaphlan2)
 	- metaxa
 - [py-popgen](https://pypi.org/project/py-popgen/)
 - r_env
+	- ['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_R_in_conda.md) 
 - rsem
 - star
 - [structure](https://web.stanford.edu/group/pritchardlab/structure.html)
   - includes [fastStructure](https://github.com/rajanil/fastStructure)
   - includes [structureHarvester](http://alumni.soe.ucsc.edu/~dearl/software/structureHarvester/)
-
 - [raxml](https://github.com/stamatak/standard-RAxML)
 
 
