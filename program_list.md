@@ -473,14 +473,14 @@ To view a list of the conda environments available on the server, use `conda inf
 - [busco](https://busco.ezlab.org/)
 - catadaptenv
 - haltools
+- humann
+	- includes [humann3](https://github.com/biobakery/biobakery/wiki/humann3#12-installation) 
 - metagenomics
 	- includes cutadapt 1.18
 	- fastqc
 	- hmmer
-	- [humann2](https://huttenhower.sph.harvard.edu/humann2/)
 	- [mafft](https://mafft.cbrc.jp/alignment/software/)
 	- megahit
-	- [metaphlan2](https://github.com/biobakery/biobakery/wiki/metaphlan2)
 	- metaxa
 - [py-popgen](https://pypi.org/project/py-popgen/)
 - r_env
