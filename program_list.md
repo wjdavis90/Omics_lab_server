@@ -525,7 +525,7 @@ To view a list of the conda environments available on the server, use `conda inf
 - Miniconda
 - myconfig.ini
 - ncbi-blast-2.10.0+
-	-['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/blast_quick_guide.md) 
+	- ['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/blast_quick_guide.md) 
 - obsutil_linux_amd64_5.1.13
 - OrthoFinder_2.3
 - OrthoFinder-2.5.2
