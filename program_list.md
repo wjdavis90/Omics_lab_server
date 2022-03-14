@@ -29,9 +29,8 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- Beast has a wonderful [home page](http://www.beast2.org/) with lots of help options. It also has many, many [tutorials](https://www.beast2.org/tutorials/) available for it.
 	- It is probably better to use th [CIPRES](https://www.phylo.org/) server.
 - bedtools
-	- static binary, must add '/scratch/Tools/' to your path
+	- static binary, must add `/scratch/Tools/` to your path
 	- [Bedtools has good online documentation](https://bedtools.readthedocs.io/en/latest/)
-	- [Some of examples of how the 'Omics lab uses bedtools](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/bedtools.md)
 - blast2bed
 	- Add `/scratch/Tools/blast2bed` to your path
 - blat
@@ -66,7 +65,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- [Home page](https://gatk.broadinstitute.org/hc/en-us)
 - gcc 4.9.4
 	- The executables are in `/scratch/Tools/local/bin` 
--  genus_assigner
+- genus_assigner
 - ghostx-1.3.7
 	- Add to path `/scratch/Tools/ghostx-1.3.7/src/`
 	- Use with the script [getRBH.pl](https://doi.org/10.1186/s12864-020-07132-6)
@@ -479,7 +478,8 @@ To view a list of the conda environments available on the server, use `conda inf
 	- includes cutaadapt 1.18
 	- fastqc
 	- hmmer
-	- mafft
+	- [humann2](https://huttenhower.sph.harvard.edu/humann2/)
+	- [mafft](https://mafft.cbrc.jp/alignment/software/)
 	- megahit
 	- metaxa
 - [py-popgen](https://pypi.org/project/py-popgen/)
