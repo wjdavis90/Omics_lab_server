@@ -15,3 +15,14 @@ What happens is that `cat scaffolds` begins reading `scaffolds` to STOUT line by
 
 ## Example 2
 
+For another usage, I wanted to pull all of the unmapped reads out of 30 bam files, create fastq files of the unmapped reads, and then do a quick assembly of those reads. Fist, I created a list of the bam files and named it `bam_list`. The commands I ran were:
+```bash
+cat bam_list | parallel -j 5 samtools view -b -f 4 {1}.transcript.bam \> unmapped.{1}.bam
+
+cat bam_list | parallel -j 5 bam2fastq -o {1}_unampped_reads#.fastq unmapped.{1}.bam
+
+cat bam_list | parallel -j 2 Trinity --seqType fq --max_memory 50G  --left {1}_unampped_reads_1.fastq --right {1}_unampped_reads_2.fastq --CPU 2 --output trinity_{1}
+```
+In each, `cat bam_list` reads the list to STOUT and `|` redirects it to parallel, which encodes the names within the list into a variable designated by `{1}`. For the first line, parallel runs `samtools view -b -f 4 {1}.transcript.bam \> unmapped.{1}.bam` in groups of 5 (designated by the `-j` flag), which creates a new bam file containing only the unmapped reads. In the second line, parallel runs `bam2fastq -o {1}_unampped_reads#.fastq unmapped.{1}.bam`, which creates three fastq files containing the unmapped reads. The last line has parallel running an assembler to make assemblies out of the unmapped reads. 
+
+**Note:** I struggled for a while to get the first line to run properly (i.e., produce the output I wanted). I kept producing a single bam file called `unmapped.{1}.bam` instead of a new bam file for each of the input bam files. After a while, i figured out that I had to [escape](https://linux.die.net/abs-guide/escapingsection.html) the ">". In other words, I had to indicate that the ">" was part of the command I wanted parallel to run and not where I was telling parallel to redirect the output. Written as `cat bam_list | parallel -j 5 samtools view -b -f 4 {1}.transcript.bam > unmapped.{1}.bam`, parallel was running `samtools view -b -f 4 {1}.transcript.bam` and putting all of the output into a single file `unmapped.{1}.bam`. 
