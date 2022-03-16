@@ -26,3 +26,29 @@ cat bam_list | parallel -j 2 Trinity --seqType fq --max_memory 50G  --left {1}_u
 In each, `cat bam_list` reads the list to STOUT and `|` redirects it to parallel, which encodes the names within the list into a variable designated by `{1}`. For the first line, parallel runs `samtools view -b -f 4 {1}.transcript.bam \> unmapped.{1}.bam` in groups of 5 (designated by the `-j` flag), which creates a new bam file containing only the unmapped reads. In the second line, parallel runs `bam2fastq -o {1}_unampped_reads#.fastq unmapped.{1}.bam`, which creates three fastq files containing the unmapped reads. The last line has parallel running an assembler to make assemblies out of the unmapped reads. 
 
 **Note:** I struggled for a while to get the first line to run properly (i.e., produce the output I wanted). I kept producing a single bam file called `unmapped.{1}.bam` instead of a new bam file for each of the input bam files. After a while, i figured out that I had to [escape](https://linux.die.net/abs-guide/escapingsection.html) the ">". In other words, I had to indicate that the ">" was part of the command I wanted parallel to run and not where I was telling parallel to redirect the output. Written as `cat bam_list | parallel -j 5 samtools view -b -f 4 {1}.transcript.bam > unmapped.{1}.bam`, parallel was running `samtools view -b -f 4 {1}.transcript.bam` and putting all of the output into a single file `unmapped.{1}.bam`. 
+
+## Example 3
+For the last example, I wanted to use `awk` to make count data for 10 patterns across 406 files. Really, really, really did not want to do it by hand or one at a time. Thus, I wrote the following script using parallel to make the counts.
+```bash
+#!/bin/sh
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 0 \&\& \$2 \=\= 2\) \{print \$0\}\}\' {1} \| wc -l \> {1}_02_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 2 \&\& \$2 \=\= 0\) \{print \$0\}\}\' {1} \| wc -l \> {1}_20_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 0 \&\& \$2 \=\= 0\) \{print \$0\}\}\' {1} \| wc -l \> {1}_00_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 2 \&\& \$2 \=\= 2\) \{print \$0\}\}\' {1} \| wc -l \> {1}_22_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 0 \&\& \$2 \=\= 1\) \{print \$0\}\}\' {1} \| wc -l \> {1}_01_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 1 \&\& \$2 \=\= 0\) \{print \$0\}\}\' {1} \| wc -l \> {1}_10_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 1 \&\& \$2 \=\= 1\) \{print \$0\}\}\' {1} \| wc -l \> {1}_11_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 2 \&\& \$2 \=\= 1\) \{print \$0\}\}\' {1} \| wc -l \> {1}_21_count &&
+
+cat comparison_list | parallel -j 4 awk \'\{if \(\$1 \=\= 1 \&\& \$2 \=\= 2\) \{print \$0\}\}\' {1} \| wc -l \> {1}_12_count &&
+
+cat comparison_list | parallel -j 4 wc -l {1} \> {1}_total_SNP
+```
+I won't bother explaining in depth as I did for the examples above. The gist is that I ran 4 instances of `awk` counting each of the 10 patterns in each of the 406 files. However, it is important to explain one thing. If I only wanted to run the count for one file, it would look like this `awk '{if ($1 == 0 && $2 == 2) {print $0}}' example_file | wc -l > example_output` but to run it within parallel it looked like this `awk \'\{if \(\$1 \=\= 0 \&\& \$2 \=\= 2\) \{print \$0\}\}\' {1} \| wc -l \> {1}_02_count`. I had to use "\" to escape out all of the non-alphanumeric characters so that parallel would know they were part of the `awk` command and not part of parllel. **The morale:** Sometimes you will have to write something that will look weird/very different than what you would write to run on a single file in order for it parallel to read it properly!
