@@ -57,7 +57,7 @@ A5	A5
 S2	S2
 O2	O2
 ```
-**NOTE:**The "species" column cannot contain names such as "A" or "B" as Beast2 will read these names as internal variables and get confused. 
+**NOTE:** The "species" column cannot contain names such as "A" or "B" as Beast2 will read these names as internal variables and get confused. 
 
 Next, we need an estimate of divergence date to use as a constraint on the tree. This esitmate can come from previous studies (e.g., [Bao et al. 2010](https://doi.org/10.1016/j.ympev.2010.03.038)) or fossil evidence or [Time Tree](http://www.timetree.org/). For the purposes of this example, we are going to use Time Tree to find out that the estimated divergence time of our clade is 4.37 mya. Note: [Stange et al. 2018](https://doi.org/10.1093/sysbio/syy006) found that root age contraints yielded slightly better results, i.e., slightly more accurate and precise (smaller 95% highest posterior densities (HPD). Thus, it is reccommended to contrain the root of the tree. 
 
