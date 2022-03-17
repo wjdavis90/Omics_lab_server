@@ -27,6 +27,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - beast
 	- PATH `/scratch/Tools/beast/bin`
 	- Beast has a wonderful [home page](http://www.beast2.org/) with lots of help options. It also has many, many [tutorials](https://www.beast2.org/tutorials/) available for it.
+	- ['Omics lab tututorial for a Beast/SNAPP time tree](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Beast_SSNAP_time_tree.md)
 	- It is probably better to use th [CIPRES](https://www.phylo.org/) server.
 - bedtools
 	- static binary, must add `/scratch/Tools/` to your path
@@ -37,6 +38,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- Add `/scratch/Tools/blat` to your path	 
 - bwa
 	- Add to PATH  `/scratch/Tools/bwa`
+	- ['Omics lab tutorial for aligning reads and calling SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md)
 - diamond
 	-  static binary, must add `/scratch/Tools/` to your path
 	-  Use with the script [getRBH.pl](https://github.com/Computational-conSequences/SequenceTools), which was developed by [Hernández-Salmerón & Moreno-Hagelsieb 2020](https://doi.org/10.1186/s12864-020-07132-6)
@@ -63,6 +65,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - gatk-4.2.0.0
 	- Add to path `/scratch/Tools/gatk-4.2.0.0/`
 	- [Home page](https://gatk.broadinstitute.org/hc/en-us)
+	- ['Omics lab tutorial for aligning reads and calling SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md)
 - gcc 4.9.4
 	- The executables are in `/scratch/Tools/local/bin` 
 - genus_assigner
@@ -76,6 +79,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - hmmer
 	- Add to path `/scratch/Tools/hmmer-3.3.2/bin/`
 	- [Wonderful manual](http://eddylab.org/software/hmmer/Userguide.pdf)
+	- ['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/hmmer_search.md)
 - maker
 	- [Home page]()
 	- [Online tutorial](https://github.com/Michigan-Mycology/Lab-Code-and-Hacks/tree/master/Genomics/Maker_pipeline) 
@@ -90,8 +94,10 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- The executables are in `/scratch/Tools/local/bin`
 	- Very, very handy tool that replaces for loops
 	- [Helpful online manual](https://www.gnu.org/software/parallel/sphinx.html)
-	- ['Omics lab tutorial]()
+	- ['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/parallel_examples.md)
 - picard.jar
+	- static binary, must add `/scratch/Tools/` to your path
+	- ['Omics lab tutorial for aligning reads and calling SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md)
 - proj-8.1.0
 - QuIBL
 - RAiSD
@@ -494,6 +500,7 @@ To view a list of the conda environments available on the server, use `conda inf
 
 
 # /home/sangeet/UserDirectories/Sangeet/Tools/
+These programs are temporarily in Sangeet's home directory. Eventually, they should be re-installed into `/scratch/Tools`.
 
 - admixture_linux-1.3.0
 - AGAT
@@ -538,6 +545,7 @@ To view a list of the conda environments available on the server, use `conda inf
 - RNAMMER
 - salmon-latest_linux_x86_64
 - samtools-1.10
+	- ['Omics lab tutorial for aligning reads and calling SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md) 
 - satsuma2
 - satsuma-code-0
 - signalp-5.0b
@@ -550,5 +558,6 @@ To view a list of the conda environments available on the server, use `conda inf
 - trinityrnaseq-v2.9.1
 - v0.3.0.tar.gz
 - vcftools_0.1.13
+	- ['Omics lab tutorial for aligning reads and calling SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md) 
 
 
