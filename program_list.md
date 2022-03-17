@@ -39,6 +39,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - bwa
 	- Add to PATH  `/scratch/Tools/bwa`
 	- ['Omics lab tutorial for aligning reads and calling SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md)
+	- [Online manual](http://bio-bwa.sourceforge.net/bwa.shtml)
 - diamond
 	-  static binary, must add `/scratch/Tools/` to your path
 	-  Use with the script [getRBH.pl](https://github.com/Computational-conSequences/SequenceTools), which was developed by [Hernández-Salmerón & Moreno-Hagelsieb 2020](https://doi.org/10.1186/s12864-020-07132-6)
