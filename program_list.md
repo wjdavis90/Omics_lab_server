@@ -24,7 +24,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 - Assign Taxonomy with BLAST
 	- Add `/scratch/Tools/Assign-Taxonomy-with-BLAST` to PATH
 	- [Homepage](https://github.com/Joseph7e/Assign-Taxonomy-with-BLAST) 
-- beast
+- beast2
 	- PATH `/scratch/Tools/beast/bin`
 	- Beast has a wonderful [home page](http://www.beast2.org/) with lots of help options. It also has many, many [tutorials](https://www.beast2.org/tutorials/) available for it.
 	- ['Omics lab tututorial for a Beast/SNAPP time tree](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Beast_SSNAP_time_tree.md)
