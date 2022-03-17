@@ -81,7 +81,8 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- [Wonderful manual](http://eddylab.org/software/hmmer/Userguide.pdf)
 	- ['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/hmmer_search.md)
 - maker
-	- [Home page]()
+	- [Home page](https://www.yandell-lab.org/software/maker.html)
+	- ['Omics lab instructions](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/run_maker.md)
 	- [Online tutorial](https://github.com/Michigan-Mycology/Lab-Code-and-Hacks/tree/master/Genomics/Maker_pipeline) 
 - mira
 	- Add to path `/scratch/Tools/mira_4.0.2_linux-gnu_x86_64_static/bin/`
