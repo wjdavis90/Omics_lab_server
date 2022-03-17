@@ -21,7 +21,7 @@
 
 #	marks line as a comment (in general)
 
-awk	magic tool; tutorial-->http://www.grymoire.com/Unix/Awk.html
+awk	magic tool; [online tutorial](http://www.grymoire.com/Unix/Awk.html)
 
 bash	run a bash script
 
@@ -59,6 +59,7 @@ grep	grabs lines containing the desired pattern
 	-A include number of lines coming after the pattern
 	-B include number of lines coming before the pattern
 	-c counts the number of times a pattern occurs
+	-o return only the pattern and not the whole line
 
 gzip	compress/decompress .gz files
 
@@ -95,6 +96,7 @@ pwd	print working directory; shows you where you are
 
 rm	permanently deletes a file
 	-r remove everything recursively
+	-i ask before deleting each file
 
 rmdir	permanently deletes a directory
 
@@ -103,13 +105,14 @@ screen	opens a new environment wherein one can set environmental variables and r
 	-r resume
 	-X quit terminates the screen
 
-sed	in line editor; tutorial-->http://www.grymoire.com/Unix/Sed.html#uh-0
+sed	in line editor; [online tutorial](http://www.grymoire.com/Unix/Sed.html#uh-0)
 
 sh	runs a shell script
 
 sort	sort
 	-n sort as number
 	-r sort in reverse order
+	-k sort by this column
 
 tail	show the last n lines of a file
 
