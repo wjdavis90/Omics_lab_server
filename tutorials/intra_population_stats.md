@@ -105,9 +105,29 @@ awk '{ sum += $4; n++ } END { if (n > 0) print sum / n; }' august.snpden
 ```
 
 ## Tajima's D
-
-
+[Tajima's D](https://en.wikipedia.org/wiki/Tajima%27s_D) is another measure of diversity we may use, and it is also calculated with vcftools. The output file has the suffix ".Tajima.D".
+```bash
+vcftools --vcf august.filtered.maf.0.05.recode.vcf --out august --TajimaD 15000
+```
+The output can be made into a joy plot with the same R script above, just replacing "pi" with "Tajima.D". **Note:**
+ R does not like using "." in column names, though.
+ 
 ## Sequence depth
+
+We can also use vcftools to estimate sequence depth, but there is not a specific flag for that as there was for the ones above.
+```bash
+vcftools --vcf august.filtered.maf.0.05.recode.vcf --out august --extract-FORMAT-info DP
+```
+And to calculate a genome wide average, I did the following. There may be a better way, and, if so, please update this page accordingly.
+```bash
+awk '{print $3}' august.DP.FORMAT | sed '1d' > column1
+awk '{print $4}' august.DP.FORMAT | sed '1d' > column2
+awk '{print $5}' august.DP.FORMAT | sed '1d' > column3
+awk '{print $6}' august.DP.FORMAT | sed '1d' > column4
+awk '{print $7}' august.DP.FORMAT | sed '1d' > column5
+cat column* > august.DP
+awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }' august.DP
+```
 
 ## Linkage Disqeuilibrium
 
