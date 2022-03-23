@@ -2,9 +2,12 @@ One of the fundamental pipelines used in the 'Omics lab is that of aligning read
 
 ## Aligning reads
 The first step is to align the reads to a reference genome. When I (William Davis) did this for the *Philornis downsii* project, I used a [for loop](https://swcarpentry.github.io/shell-novice/05-loop/index.html) to cycle through each population. I am going to use that script as the example below. However, with some work, I think one could adapt it for use with [parallel](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/parallel_examples.md), which would speed it up some. I have the whole script below and then I deconstruct it line by line (ignoring the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) at the top). Sample details have been omitted.
+
+**NOTE:** For all the examples, I assume three populations of 5 individuals each. I named the populations "August", "September", and "October", and the individuals are labelled as the first letter of the month (i.e., population name) followed by a number, e.g., A1.
+
 ```bash
 #!/bin/bash
-string="space delimited list of samples"
+string="august september october"
 for sample in $string
 
 do
@@ -52,7 +55,7 @@ Now that we have bam files for each sample, we can begin the process of calling 
 
 ```bash
 #!/bin/bash
-string="CB_B3_B CB_B5_B CB_C3_B CB_C5_B CB_E5 IS_G5_B IS_G7_B IS_G8_B IS_H1_B PZ_C2_B PZ_D1_B PZ_D4_B PZ_D9 PZ_E3 CB_B4_B CB_B6_B CB_C4_B CB_E3  CB_E7 IS_G6  IS_G8_2 IS_G9_B IS_H2_B PZ_C7_B PZ_D2  PZ_D5  PZ_E1 PZ_E5"
+string="august september october"
 for sample in $string
 
 do
@@ -72,14 +75,14 @@ samtools faidx reference_genome.fasta
 gatk CreateSequenceDictionary -R reference_genome.fasta
 ```
 
-Next, we call the SNPs and produce gVCF files. For this, I originally tried to run a for loop; however, that takes a long time. Sangeet introduced me to wait scripts with which I could run multiple samples at a time, greatly speeding it up. I only provide an example of the command one might use below. With some work, one might eb able to adapt it for use in parallel, which would take the place of a wait script. A wait script has one command per line with a `&` at the end of each command and `wait` as the last command. Bash will run each command on a different node/CPU/processor.
+Next, we call the SNPs and produce gVCF files. For this, I originally tried to run a for loop; however, that takes a long time. Sangeet introduced me to wait scripts with which I could run multiple samples at a time, greatly speeding it up. I only provide an example of the command one might use below. With some work, one might eb able to adapt it for use in parallel, which would take the place of a wait script. A wait script has one command per line with a `&` at the end of each command and `wait` as the last command. Bash will run each command on a different node/CPU/processor. Below is an example using the "August" population
 ```bash
-gatk HaplotypeCaller --input "$sample"_Map.sorted.MarkDup.bam --output "$sample"_Map.sorted.MarkDup.bam.g.vcf --reference /PATH/reference_genome.fasta -mbq 20 -ERC GVCF 2> "$sample"_log.log &
+gatk HaplotypeCaller --input august_Map.sorted.MarkDup.bam --output august_Map.sorted.MarkDup.bam.g.vcf --reference /PATH/reference_genome.fasta -mbq 20 -ERC GVCF 2> august_log.log &
 ```
 
 Next we use `gatk CombineGVCFs` to combine all of the gVCF files into a single VCF file. 
 ```bash
-gatk CombineGVCFs -R /PATH/reference_genome.fasta --variant August_Map.sorted.MarkDup.bam.g.vcf --variant September_Map.sorted.MarkDup.bam.g.vcf -O combined.vcf
+gatk CombineGVCFs -R /PATH/reference_genome.fasta --variant august_Map.sorted.MarkDup.bam.g.vcf --variant september_Map.sorted.MarkDup.bam.g.vcf --variant october_Map.sorted.MarkDup.bam.g.vcf -O combined.vcf
 ```
 We use `-R` to tell `gatk CombineGVCFs` what the reference genome is, we use `--variant` to call each gVCF file, and we designate the output with `-O`. Finally, we call the genotypes of each SNP.
 ```bash
@@ -157,7 +160,7 @@ Pos_Rank <- drop_na(Pos_Rank)
 
 QD <-read.table("combined_genotypes_QD.INFO", as.is=T, header=T)
 
-QD$QD <-as.numeric(QD$QD
+QD$QD <-as.numeric(QD$QD)
 
 QD<-drop_na(QD)
 
@@ -166,9 +169,11 @@ QD<-drop_na(QD)
 GQ_density_plot <-ggplot(GQ) +
 geom_density(aes(x=August, color="August")) +
 geom_density(aes(x=September, color="September")) +
+geom_density(aes(x=September, color="October")) +
 scale_color_manual(name= "Sample",
 			values=c("August"= "#543005",
-					"September"= "#8c510a")) +
+					"September"= "#8c510a",
+					"October" = "#2ca25f")) +
 #What we did above was specify what colors we want to be used for each value.
 #If this is not desired, then one can modify and use a pre-built color scheme.
 xlab("GQ") +
