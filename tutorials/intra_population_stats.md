@@ -128,7 +128,3 @@ awk '{print $7}' august.DP.FORMAT | sed '1d' > column5
 cat column* > august.DP
 awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }' august.DP
 ```
-
-## Linkage Disqeuilibrium
-
-## Effective popualtion size
