@@ -88,10 +88,18 @@ print(PI_joy_plot)
 dev.off()
 ```
 
+One may also want the average of a population, and for that we need a simple `awk` script.
+```bash
+awk '{ sum += $5; n++ } END { if (n > 0) print sum / n; }' august.windowed.pi
+```
+This will output the average pi to the terminals creen, if you want it in a file you will need to redirect it with `>`.
+
 ## snp density
 
 
 ## Tajima's D
+
+## Sequence depth
 
 ## Linkage Disqeuilibrium
 
