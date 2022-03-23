@@ -11,7 +11,7 @@ A common pipeline/work flow for the 'Omics lab is
 
 1. [Align reads to a reference genome and call SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md)
 2. [Calculate intra-population statistics]()
-3. [Determine relatedness of individuals within populations]()
+3. [Determine relatedness of individuals within populations](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/relatedness.md)
 4. [Use Treemix to look at migration among populations]()
 5. Estimate divergence among populations using either [Fst]() or [Population branch statistics]()
 6. Identify windows of interest
