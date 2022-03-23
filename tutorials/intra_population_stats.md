@@ -95,9 +95,17 @@ awk '{ sum += $5; n++ } END { if (n > 0) print sum / n; }' august.windowed.pi
 This will output the average pi to the terminals creen, if you want it in a file you will need to redirect it with `>`.
 
 ## snp density
-
+Another thing we may want to estimate is SNP density, which is what it sounds like. This is also done with vcftools. The resulting output file has the suffix ".snpden".
+```bash
+vcftools --vcf august.filtered.maf.0.05.recode.vcf --out august --SNPdensity 15000
+```
+We again use an `awk` script to get a genome average.
+```bash
+awk '{ sum += $4; n++ } END { if (n > 0) print sum / n; }' august.snpden
+```
 
 ## Tajima's D
+
 
 ## Sequence depth
 
