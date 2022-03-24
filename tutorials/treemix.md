@@ -43,7 +43,7 @@ gzip final.v1.snp.filtered.Q100.GQ10.vcf.recode.vcf.p.treemix
 treemix -i final.v1.snp.filtered.Q100.GQ10.vcf.recode.vcf.p.treemix.gz -root Outgroup -k 1000 -o Populations
 ```
 
-This should produce 7 files all with the name that you provide with the `-o` flag. These can be used to build a graph using R using a script called `plotting funcs.R` that comes as part of the Treemix source code. On the server, it is located here. Below is an example of how to use this script to produce the graph.
+This should produce 7 files all with the name that you provide with the `-o` flag. These can be used to build a graph using R using a script called `plotting funcs.R` that comes as part of the Treemix source code. On the server, it is located here `/scratch/Tools/treemix-1.13/src`. Below is an example of how to use this script to produce the graph.
 ```R
 #Plotting TreeMix results
 
@@ -55,7 +55,7 @@ ppi <-1000
 
 
 #load the plotting funtion
-source("//plotting_funcs.R")
+source("/scratch/Tools/treemix-1.13/src/plotting_funcs.R")
 
 #Plot the trees
 plot_tree("Populations")
