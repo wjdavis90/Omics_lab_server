@@ -16,4 +16,3 @@ A common pipeline/work flow for the 'Omics lab is presented below. For all the e
 5. Estimate divergence among populations using either [Fst](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/fst.md) or [Population branch statistics](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/angsd.md)
 6. Identify windows of interest
 7. [Build phylogenetic trees of the windows of interest](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/vcf_to_fast_tree.md)
-8. [Run SNPeff]()
