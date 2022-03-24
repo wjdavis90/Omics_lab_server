@@ -102,7 +102,6 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- Run with `python /scratch/Tools/partitionfinder-2.1.1/PartitionFinder.py`
 	- [Online manual](https://www.robertlanfear.com/partitionfinder/assets/Manual_v2.1.x.pdf)
 	- [Online tutorial](http://www.robertlanfear.com/partitionfinder/tutorial/)
-	- ['Omics lab tutorial]()
 - picard.jar
 	- static binary, must add `/scratch/Tools/` to your path
 	- ['Omics lab tutorial for aligning reads and calling SNPS](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/Aligning_reads_calling_SNPS.md)
