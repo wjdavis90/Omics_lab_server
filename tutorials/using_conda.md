@@ -44,6 +44,7 @@ To view a list of the conda environments available on the server, use `conda inf
 	- [mafft](https://mafft.cbrc.jp/alignment/software/)
 	- megahit
 	- metaxa
+- [PartitionFinder2](http://www.robertlanfear.com/partitionfinder/)
 - [py-popgen](https://pypi.org/project/py-popgen/)
 - r_env
 	- ['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_R_in_conda.md) 
