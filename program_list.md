@@ -97,7 +97,7 @@ This is a list of programs currently located in `/scratch/Tools/`. If you instal
 	- Very, very handy tool that replaces for loops
 	- [Helpful online manual](https://www.gnu.org/software/parallel/sphinx.html)
 	- ['Omics lab tutorial](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/parallel_examples.md)
--PartitionFinder2
+- PartitionFinder2
 	- Must do `conda activate partitionfinder`
 	- Run with `python /scratch/Tools/partitionfinder-2.1.1/PartitionFinder.py`
 	- [Online manual](https://www.robertlanfear.com/partitionfinder/assets/Manual_v2.1.x.pdf)
