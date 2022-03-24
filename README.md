@@ -5,7 +5,7 @@ This GitHub repository contains useful information about the lab server as well 
 * [A list of programs available on the server](https://github.com/wjdavis90/Omics_lab_server/blob/main/program_list.md)
 * [Tutorials](https://github.com/wjdavis90/Omics_lab_server/tree/main/tutorials) on how to use those programs
 * Tutorials and data for the [October 2021 Bioinformatics Boot camp](https://github.com/wjdavis90/Omics_lab_server/tree/main/tutorials/2021_Bio_Info_Bootcamp)
-* Other useful tips/hints
+* [How to use conda and a list of conda environments on the server](https://github.com/wjdavis90/Omics_lab_server/blob/main/tutorials/using_conda.md)
 
 A common pipeline/work flow for the 'Omics lab is presented below. For all the examples, I assume three populations of 5 individuals each. I named the populations "August", "September", and "October", and the individuals are labelled as the first letter of the month (i.e., population name) followed by a number, e.g., A1.
 
