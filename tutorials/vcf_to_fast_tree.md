@@ -60,4 +60,66 @@ O5,October
 ```
 One can add additional columns that can be used to color the tips and other things if one wants.
 
+Then it is a simple matter of loading them into R. Again, I used a bunch of *magic* (i.e., commands and scripts that I did not properly record) to write the R script to do all 56 windows for the partidge project.
+```R
+#R script to make quick trees from the fast trees of the exciting windows
 
+#Load libraries
+library(tidyverse)
+library(readxl)
+library(ggtree)
+library(ggtreeExtra)
+library(deeptime)
+library(ggfittext)
+library(phytools)
+library(scales)
+library(RColorBrewer)
+library(patchwork)
+library(ggstance)
+library(treeio)
+library(ape)
+
+#Set working directory
+setwd("/PATH/")
+
+#set resolution
+ppi <- 1000
+
+#Load tip labels
+
+tip_labels <- read.csv("population_info.csv", header=TRUE)
+
+#Load trees
+
+tree.1.1000000.1001500 <-read.newick("1.1000000.1001500.tre")
+
+#Root the trees
+#As with the Treemix example, I will use the August population as the outgroup.
+
+rooted.1.1000000.1001500 <- ape::root(tree.1.1000000.1001500,
+				outgroup= c("A1",
+                      "A2",
+                      "A3",
+                      "A4",
+                      "A5"),
+				edgelabel=TRUE)
+
+#Plot the trees
+#NOTE: Not all the trees will have the smae branch lenths, thus, they will not all need the same plotting window size. After plotting and saving everything, it is a good idea to go through the results and see which trees you will need to change the xlim(,) values for in order for them to print nicely.
+#In this example, I color the tips by the population. However, one could add other columns to the info file (e.g., Sex, Diet, Habitat) and color by those instead.
+
+plot.1.1000000.1001500 <- ggtree(rooted.1.1000000.1001500) %<+% tip_labels +
+ggtitle("Window of interest 1.1000000.1001500") +
+theme(plot.title=element_text(size=10)) +
+geom_tiplab(aes(label = label_pretty,
+			color=as.character(Label_pretty))) +
+xlim(0, 0.6) +
+theme(legend.position="none") +
+scale_color_brewer(palette="Dark2")
+
+#Save the trees
+
+pdf("Tree.1.1000000.1001500.pdf")
+print(plot.1.1000000.1001500)
+dev.off()
+```
